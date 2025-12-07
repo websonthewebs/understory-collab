@@ -3,11 +3,12 @@ import './App.css'
 
 function App() {
   return (
-    <div className="landing">
+    <main className="landing">
+      <h1 className="sr-only">Understory Collaborative</h1>
       <img src={ucLogo} className="logo" alt="Understory Collab logo" />
-      <p className="tagline">Quietly growing beneath the canopy.</p>
+      <p className="tagline" aria-live="polite">Quietly growing beneath the canopy.</p>
       <p className="coming-soon">Something is taking root.</p>
-    </div>
+    </main>
   )
 }
 
