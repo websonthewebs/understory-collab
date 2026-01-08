@@ -1,0 +1,79 @@
+.accessibility-page {
+  width: 100%;
+}
+
+.accessibility-content {
+  padding: 4rem 0;
+}
+
+.accessibility-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accessibility-text h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 2.5rem 0 1rem;
+}
+
+.accessibility-text h2:first-of-type {
+  margin-top: 0;
+}
+
+.accessibility-text p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.accessibility-text ul {
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.accessibility-text li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.accessibility-text li:last-child {
+  margin-bottom: 0;
+}
+
+.accessibility-text a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.accessibility-text a:hover {
+  text-decoration: none;
+}
+
+.accessibility-text a:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.accessibility-text strong {
+  color: var(--text-primary);
+}
+
+.last-updated {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .accessibility-content {
+    padding: 2rem 0;
+  }
+
+  .accessibility-text h2 {
+    font-size: 1.25rem;
+  }
+}

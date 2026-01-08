@@ -1,11 +1,44 @@
+/* CSS Custom Properties for theming */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Base colors - Dark theme (default) */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #242424;
+  --bg-hover: #2f2f2f;
+
+  --text-primary: rgba(255, 255, 255, 0.95);
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.5);
+
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* Accent colors - warm earth tones */
+  --accent-color: #E8A87C;
+  --accent-hover: #d4956a;
+  --accent-bg: rgba(232, 168, 124, 0.1);
+
+  /* Focus and interaction */
+  --focus-color: #E8A87C;
+  --focus-ring: rgba(232, 168, 124, 0.3);
+
+  /* Form states */
+  --error-color: #e57373;
+  --error-bg: rgba(229, 115, 115, 0.1);
+  --error-border: rgba(229, 115, 115, 0.3);
+  --error-text: #e57373;
+  --error-ring: rgba(229, 115, 115, 0.3);
+
+  --success-bg: rgba(129, 199, 132, 0.1);
+  --success-border: rgba(129, 199, 132, 0.3);
+  --success-text: #81c784;
+
+  /* Typography */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +46,241 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Light theme */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-hover: #e8e8e8;
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6a6a6a;
+
+  --border-color: rgba(0, 0, 0, 0.1);
+
+  /* Accent colors - forest greens for light mode */
+  --accent-color: #2D5A3D;
+  --accent-hover: #3D6B4D;
+  --accent-bg: rgba(45, 90, 61, 0.1);
+
+  --focus-color: #2D5A3D;
+  --focus-ring: rgba(45, 90, 61, 0.3);
+
+  --error-color: #c62828;
+  --error-bg: rgba(198, 40, 40, 0.1);
+  --error-border: rgba(198, 40, 40, 0.3);
+  --error-text: #c62828;
+  --error-ring: rgba(198, 40, 40, 0.3);
+
+  --success-bg: rgba(46, 125, 50, 0.1);
+  --success-border: rgba(46, 125, 50, 0.3);
+  --success-text: #2e7d32;
 }
-a:hover {
-  color: #535bf2;
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#root {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-button {
+p {
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Shared page hero styles */
+.page-hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.page-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+.page-hero-description {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Shared section container */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Shared button styles */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 2px solid transparent;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.btn:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+/* CTA Section - shared across pages */
+.cta-section {
+  padding: 5rem 0;
+  background-color: var(--bg-secondary);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+.cta-section p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin: 0 0 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 2rem 1rem;
   }
-  a:hover {
-    color: #747bff;
+
+  .page-hero h1 {
+    font-size: 2rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .page-hero-description {
+    font-size: 1.125rem;
+  }
+
+  .section-container {
+    padding: 0 1rem;
+  }
+
+  .cta-section {
+    padding: 3rem 0;
   }
 }
