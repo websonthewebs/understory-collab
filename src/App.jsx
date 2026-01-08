@@ -1,14 +1,30 @@
-import ucLogo from './assets/UC_Logo.png'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Advisory from './pages/Advisory'
+import Implementation from './pages/Implementation'
+import Portfolios from './pages/Portfolios'
+import Contact from './pages/Contact'
+import Accessibility from './pages/Accessibility'
 import './App.css'
 
 function App() {
   return (
-    <main className="landing">
-      <h1 className="sr-only">Understory Collaborative</h1>
-      <img src={ucLogo} className="logo" alt="Understory Collab logo" />
-      <p className="tagline" aria-live="polite">Quietly growing beneath the canopy.</p>
-      <p className="coming-soon">Something is taking root.</p>
-    </main>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="advisory" element={<Advisory />} />
+            <Route path="implementation" element={<Implementation />} />
+            <Route path="portfolios" element={<Portfolios />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="accessibility" element={<Accessibility />} />
+          </Route>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   )
 }
 
