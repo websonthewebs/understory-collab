@@ -11,7 +11,6 @@ function Navigation() {
       <nav className="nav-container" aria-label="Main navigation">
         <Link to="/" className="nav-logo-link" aria-label="Understory Collaborative home">
           <img src={ucLogo} alt="" className="nav-logo" aria-hidden="true" />
-          <span className="nav-logo-text">Understory</span>
         </Link>
 
         <ul className="nav-links" role="list">

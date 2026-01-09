@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import ucLogo from '../assets/UC_Logo.png'
 import './Home.css'
 
 function Home() {
@@ -7,9 +6,7 @@ function Home() {
     <div className="home">
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-content">
-          <img src={ucLogo} alt="" className="hero-logo" aria-hidden="true" />
           <h1 id="hero-heading">Understory Collaborative</h1>
-          <p className="hero-tagline">Quietly growing beneath the canopy.</p>
           <p className="hero-description">
             We are a collective of technologists with decades of professional experience,
             bringing a human-centric approach to solving complex business and technical challenges.

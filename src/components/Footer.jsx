@@ -7,10 +7,6 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-brand">
-          <p className="footer-tagline">Quietly growing beneath the canopy.</p>
-        </div>
-
         <nav className="footer-nav" aria-label="Footer navigation">
           <ul className="footer-links" role="list">
             <li><Link to="/advisory">Advisory</Link></li>
