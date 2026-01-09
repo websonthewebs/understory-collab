@@ -15,19 +15,6 @@
   text-align: center;
 }
 
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.footer-tagline {
-  color: var(--accent-color);
-  font-style: italic;
-  margin: 0;
-}
-
 .footer-nav {
   width: 100%;
 }
