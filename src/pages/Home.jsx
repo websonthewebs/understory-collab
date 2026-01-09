@@ -7,9 +7,10 @@ function Home() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-content">
           <h1 id="hero-heading">Understory Collaborative</h1>
+          <p className="hero-tagline">We meet you where you are.</p>
           <p className="hero-description">
-            We are a collective of technologists with decades of professional experience,
-            bringing a human-centric approach to solving complex business and technical challenges.
+            We create the conditions for people and organizations to flourish—through
+            accessible, ethical technology and collaborative practice.
           </p>
           <div className="hero-cta">
             <Link to="/contact" className="btn btn-primary">Get in Touch</Link>
