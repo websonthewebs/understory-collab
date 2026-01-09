@@ -1,12 +1,6 @@
 import { useState } from 'react'
 import './Contact.css'
 
-// To enable form submissions:
-// 1. Go to https://formspree.io and create a free account
-// 2. Create a new form and copy your form ID
-// 3. Replace 'YOUR_FORM_ID' below with your actual form ID
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
-
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -60,11 +54,10 @@ function Contact() {
     setSubmitStatus(null)
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
         },
         body: JSON.stringify({
           name: formData.name,
