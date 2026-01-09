@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import './Contact.css'
 
+// To enable form submissions:
+// 1. Go to https://formspree.io and create a free account
+// 2. Create a new form and copy your form ID
+// 3. Replace 'YOUR_FORM_ID' below with your actual form ID
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -51,14 +57,28 @@ function Contact() {
     }
 
     setIsSubmitting(true)
+    setSubmitStatus(null)
 
     try {
-      const mailtoLink = `mailto:contact@understorycollab.com?subject=${encodeURIComponent(`Contact from ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      })
 
-      window.location.href = mailtoLink
-
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', message: '' })
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
     } catch {
       setSubmitStatus('error')
     } finally {
@@ -112,11 +132,7 @@ function Contact() {
               {submitStatus === 'success' && (
                 <div className="form-success" role="alert">
                   <p>
-                    <strong>Your email client should have opened.</strong> If it didn't,
-                    please email us directly at{' '}
-                    <a href="mailto:contact@understorycollab.com">
-                      contact@understorycollab.com
-                    </a>
+                    <strong>Message sent!</strong> We'll get back to you within one business day.
                   </p>
                 </div>
               )}
