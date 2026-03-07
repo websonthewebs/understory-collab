@@ -1,4 +1,6 @@
-# Building Real-Time Facial Emotion Recognition for an Interactive Film
+# From Emotion Recognition to Eye Tracking: Building Interactive Film Technology with Karen Palmer
+
+_Through the ThoughtWorks Arts residency program, we partnered with immersive filmmaker Karen Palmer to build the technology behind two groundbreaking interactive installations — RIOT and Perception iO._
 
 ---
 
@@ -6,69 +8,77 @@
 
 | Field | Value |
 |---|---|
-| **Client** | Artist in Residence — RIOT Interactive Film Project |
+| **Client** | Karen Palmer, Artist in Residence — ThoughtWorks Arts |
 | **Industry** | Interactive Media / Arts & Technology |
 | **Services Provided** | Implementation + Product Leadership |
-| **Engagement Duration** | [Duration — please fill in] |
-| **Team Size** | Volunteer-based, rotating contributors |
-| **Key Technologies** | Machine Learning, Facial Emotion Recognition, Open Source |
+| **Team** | Volunteer-based, rotating contributors |
+| **Key Technologies** | Python, Keras, TensorFlow, Electron, Tobii Eye Tracker |
+| **Recognition** | Cooper Hewitt Smithsonian Design Museum exhibition, STARTS Prize 2020 Honorable Mention, Ars Electronica |
 
 ---
 
 ### The Challenge
 
-RIOT was an ambitious concept: an interactive film that watches you back. The movie would use real-time facial emotion recognition to read the viewer's emotional state — fear, anger, or neutrality — and branch the storyline accordingly. Each viewer's experience would be shaped by their own reactions, creating a deeply personal narrative that no two people would see the same way.
+#### RIOT
 
-The technical challenge was significant. Building a reliable facial emotion recognition system meant tackling machine learning in a domain where quality training data was scarce. Finding a suitable dataset to test and train the model against proved to be one of the project's most persistent obstacles.
+Karen Palmer's RIOT is an interactive film that responds to the viewer. The concept: use real-time facial emotion recognition to detect the viewer's emotional state and branch the storyline accordingly. A fearful reaction takes the narrative one direction, anger another, neutrality another.
 
-The operational challenge was just as real. With no funding, the entire project ran on volunteer labor. That meant constant turnover — contributors would join, ramp up, and sometimes leave before finishing their work. Keeping the project moving forward required not just technical skill but coordination, direction, and the ability to maintain cohesion across a shifting team.
+The technical challenge was building a reliable facial emotion recognition system from scratch. Quality training data was scarce — finding suitable datasets to train and test against was one of the project's most persistent obstacles. The operational challenge was just as real: with no funding, the entire project ran on volunteer labor, which meant constant turnover of contributors.
+
+#### Perception iO
+
+<!-- QUESTION: How would you describe the conceptual leap from RIOT to Perception iO in your own words? The research says it explored empathy, bias, and perception — but I want your framing. -->
+
+Perception iO evolved the concept further. Built on the same facial emotion recognition and storyline manager from RIOT, it layered on Tobii eye tracking hardware to determine who the viewer had empathy with — adding gaze data to the emotional response data. This introduced a new dimension of complexity: hardware integration on top of what had been a software-only project.
+
+The installation was commissioned for *Face Values: Exploring Artificial Intelligence* at the Cooper Hewitt Smithsonian Design Museum (September 2019 – May 2020).
 
 ---
 
 ### Our Approach
 
-**Root (Discovery & Strategy)**
+**RIOT — Building the Foundation**
 
-This project required building two core systems from scratch: the facial emotion recognition engine and a storyline manager that served as the branching skeleton for the video. Before writing code, we had to solve foundational questions — what datasets could we realistically use for training? How accurate did the emotion detection need to be for the branching to feel responsive rather than random? How would we structure the storyline graph so that branches felt narratively coherent?
+Through the ThoughtWorks Arts residency program, we built two core systems from scratch: [EmoPy](https://github.com/thoughtworksarts/EmoPy), a deep neural net toolkit for facial expression recognition capable of classifying seven emotions (happiness, anger, fear, surprise, disgust, sadness, and calm/neutral), and the [RIOT Storyline Manager](https://github.com/thoughtworksarts/riot-storyline-manager), an Electron-based application that managed the branching video structure via XML configuration.
 
-**Rise (Build & Iterate)**
+<!-- QUESTION: How would you describe your progression from developer to product ownership / project management in your own words? I don't want to characterize your role — I want your version of what happened. -->
 
-What started as a development role quickly expanded into product ownership and project management. With a volunteer team, there was no formal structure — so we built one. That meant assigning people to roles that matched their skills, keeping the technical direction cohesive as contributors rotated in and out, and making sure the two workstreams (emotion recognition and storyline management) stayed aligned.
+The machine learning work was a first foray into ML — working through dataset challenges hands-on, iterating on models, and learning by doing. With a volunteer team and no formal structure, coordination was essential: assigning people to roles, keeping the technical direction cohesive as contributors rotated in and out, and making sure the emotion recognition and storyline management workstreams stayed aligned.
 
-The machine learning work was a first foray into ML — learning by doing, iterating on models, and working through the dataset challenges hands-on. The storyline manager became its own distinct project, providing the framework for how video segments connected and branched based on the emotion recognition output.
+**Perception iO — Adding Hardware**
 
-**Flourish (Deliver & Sustain)**
+<!-- QUESTION: What were the specific challenges of integrating the Tobii eye tracker? What made the hardware dimension harder than pure software? -->
 
-Both the facial emotion recognition engine and the storyline manager were released as open-source projects on GitHub, making the work available to the broader community. The projects live beyond the original engagement, available for others to learn from, fork, and build upon.
+Perception iO took the proven RIOT foundation and added [Tobii eye tracking](https://github.com/thoughtworksarts/perception-eye-tracking) to capture where the viewer was looking — specifically, who they showed empathy toward. The same storyline manager and facial emotion recognition powered the core experience, but the hardware integration introduced new challenges.
 
 ---
 
 ### The Results
 
-| Metric | Detail |
+| Outcome | Detail |
 |---|---|
-| **Emotion Recognition** | Working ML model capable of classifying fear, anger, and neutral states in real time |
-| **Storyline Branching** | Functional storyline manager enabling dynamic video branching based on viewer emotion |
-| **Open Source** | Both projects published on GitHub and available to the community |
-| **Team Coordination** | Successfully delivered with an all-volunteer, rotating team and zero budget |
-
-<!-- TODO: Add links to the GitHub repositories -->
-<!-- TODO: Add any metrics on contributors, stars, forks if available -->
+| **EmoPy** | Open-source FER toolkit — 966 GitHub stars, 16+ contributors, 299 commits ([GitHub](https://github.com/thoughtworksarts/EmoPy)) |
+| **RIOT Storyline Manager** | Open-source branching engine — 97 commits, 23 PRs ([GitHub](https://github.com/thoughtworksarts/riot-storyline-manager)) |
+| **Perception Eye Tracking** | Tobii integration for gaze-based empathy detection ([GitHub](https://github.com/thoughtworksarts/perception-eye-tracking)) |
+| **Cooper Hewitt Exhibition** | Perception iO shown at the Smithsonian Design Museum, Sept 2019 – May 2020 |
+| **STARTS Prize 2020** | Honorable mention from the European Commission's Science, Technology & the Arts program |
+| **Ars Electronica** | Exhibited at *In Kepler's Gardens* |
 
 ---
 
 ### Client Perspective
 
-> [Quote from the artist in residence — reach out to see if they'd provide a testimonial]
+> [Placeholder — reach out to Karen Palmer for a quote]
 
 ---
 
 ### Key Takeaways
 
-- **Constraint breeds creativity.** No funding and an all-volunteer team forced resourcefulness in every decision — from dataset selection to team coordination. The project shipped anyway.
-- **Wearing multiple hats is a feature, not a compromise.** Moving fluidly between development, product ownership, and project management kept the project cohesive when a rigid role structure would have collapsed under the turnover.
-- **Open source extends impact.** By publishing both projects, the work outlived the original engagement and became a resource for the broader interactive media and ML community.
-- **First forays create foundations.** This project was an entry point into machine learning — proof that complex technical domains become accessible when you're solving a real, motivating problem.
+- **Open source extends impact.** All three projects were published on GitHub, making the work available to researchers, artists, and developers well beyond the original installations. EmoPy alone has nearly 1,000 stars.
+- **Software foundations enable hardware evolution.** The RIOT codebase became the platform that Perception iO built upon — proving that well-architected open-source tools can grow with a project's ambitions.
+- **Volunteer teams can ship real work.** Both projects delivered with rotating contributors and no funding, through clear coordination and role assignment.
+
+<!-- QUESTION: Are there other takeaways you'd want to highlight? Anything about the ThoughtWorks experience specifically that shaped how you work today? -->
 
 ---
 
@@ -84,9 +94,8 @@ Both the facial emotion recognition engine and the storyline manager were releas
 
 _Items for the author to revisit before publishing:_
 
-- [ ] Confirm engagement duration
-- [ ] Add GitHub repository links for both projects (emotion recognition + storyline manager)
-- [ ] Reach out to the artist in residence for a testimonial quote
-- [ ] Add any available metrics (GitHub stars, forks, contributors over time)
-- [ ] Confirm whether the artist/project name can be used publicly or needs anonymizing
-- [ ] Add screenshots or diagrams showing the branching concept
+- [ ] Answer the inline questions (marked with `<!-- QUESTION -->` comments)
+- [ ] Reach out to Karen Palmer for a testimonial quote
+- [ ] Add screenshots or diagrams of the installations
+- [ ] Confirm framing of ThoughtWorks connection (currently using Option B)
+- [ ] Review whether any details about the volunteer team need adjusting
