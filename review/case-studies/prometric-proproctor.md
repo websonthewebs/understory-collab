@@ -59,7 +59,7 @@ Without in-person supervision, video became the backbone of exam integrity. Twil
 
 **Speed as a Constraint**
 
-The entire platform was re-launched in under four months. [Placeholder — what made this possible? Architecture decisions, team structure, delivery approach? Flag for team review.]
+The entire platform was re-launched in under four months — a timeline made possible by team structure and delivery approach. [Placeholder — can we say more about what this looked like in practice? How were teams organized, how was work coordinated across the five contribution areas, what delivery practices kept things moving? Flag for team review.]
 
 ---
 
@@ -113,7 +113,7 @@ _Items for the author to revisit before publishing:_
 - [ ] Fill in User Experience Design details — proctor UX, candidate UX, or both?
 - [ ] Fill in Accessibility details — WCAG compliance, specific challenges?
 - [ ] Fill in Security Consulting details — threat modeling, pen testing, compliance?
-- [ ] Fill in what made the fast delivery timeline possible
+- [ ] Expand on team structure and delivery approach that enabled the 4-month timeline
 - [ ] Fill in the Reflections section with input from team members
 - [ ] Check whether Prometric has any public quotes available
 - [ ] Confirm the June–October 2020 timeline
