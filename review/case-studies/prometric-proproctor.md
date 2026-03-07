@@ -10,7 +10,9 @@ _When the pandemic shut down testing centers worldwide, several Understory team 
 |---|---|
 | **Client** | Prometric |
 | **Industry** | Testing & Assessment |
-| **Engagement** | Greyshore Associates (Twilio partner) — several Understory team members contributed during their time at Greyshore |
+| **Engagement** | Greyshore Associates (Twilio partner) |
+| **Understory Connection** | Several Understory team members contributed to this work during their time at Greyshore |
+| **Areas of Contribution** | Delivery Ecosystem (Infrastructure), Front-End Application, User Experience Design, Accessibility, Security Consulting |
 | **Timeline** | June – October 2020 |
 | **Key Technologies** | Twilio Flex, Twilio Programmable Video |
 | **Outcome** | 80% increase in concurrent test session capacity |
@@ -29,13 +31,27 @@ The stakes were high in every sense: exam integrity, candidate experience, and P
 
 ### The Work
 
-In June 2020, Prometric engaged Greyshore Associates — a Twilio partner — alongside Twilio's Professional Services team to rapidly re-launch ProProctor on a modern, scalable foundation.
+In June 2020, Prometric engaged Greyshore Associates — a Twilio partner — alongside Twilio's Professional Services team to rapidly re-launch ProProctor on a modern, scalable foundation. The work spanned multiple disciplines, with Understory team members contributing across four key areas.
 
-[Placeholder — what specifically did the Greyshore team build beyond the Twilio integration? Flag for team members to fill in.]
+**Delivery Ecosystem — Infrastructure**
 
-**Twilio Flex — The "Single Pane of Glass"**
+The delivery ecosystem team built and maintained the infrastructure underpinning ProProctor — the foundation that everything else ran on. [Placeholder — what did this include specifically? CI/CD, cloud infrastructure, environments, deployment pipelines? Flag for team review.]
+
+**Front-End Application**
 
 The Greyshore team built a custom UI on Twilio Flex that gave proctors a unified view of everything they needed: candidate video feeds, chat, exam status, and support tools — all in a single interface designed to Prometric's exact specifications. Rather than toggling between systems, proctors could monitor and support candidates from one screen.
+
+**User Experience Design**
+
+[Placeholder — what did UX design look like on this project? Was the team designing the proctor experience, the candidate experience, or both? How did the compressed timeline shape design decisions? Flag for team review.]
+
+**Accessibility**
+
+[Placeholder — what accessibility work was involved? WCAG compliance for the candidate-facing experience? Proctor tooling? Were there specific challenges around making a video-first proctoring platform accessible? Flag for team review.]
+
+**Security Consulting**
+
+For a platform handling high-stakes professional and academic exams, security was non-negotiable. [Placeholder — what did security consulting involve? Threat modeling, penetration testing, secure architecture review, compliance requirements? How did security considerations shape the platform design? Flag for team review.]
 
 **Programmable Video — Exam Integrity at Scale**
 
@@ -43,7 +59,7 @@ Without in-person supervision, video became the backbone of exam integrity. Twil
 
 **Speed as a Constraint**
 
-The entire platform was re-launched in under four months. [Placeholder — what made this possible? Architecture decisions, team structure, delivery approach? Flag for team members to fill in.]
+The entire platform was re-launched in under four months. [Placeholder — what made this possible? Architecture decisions, team structure, delivery approach? Flag for team review.]
 
 ---
 
@@ -93,10 +109,12 @@ The entire platform was re-launched in under four months. [Placeholder — what 
 
 _Items for the author to revisit before publishing:_
 
-- [ ] Confirm which Understory team members worked on this at Greyshore and their roles
-- [ ] Fill in the "broader scope" details — what did Greyshore build beyond the Twilio integration?
+- [ ] Fill in Delivery Ecosystem (Infrastructure) details — what specifically was built?
+- [ ] Fill in User Experience Design details — proctor UX, candidate UX, or both?
+- [ ] Fill in Accessibility details — WCAG compliance, specific challenges?
+- [ ] Fill in Security Consulting details — threat modeling, pen testing, compliance?
+- [ ] Fill in what made the fast delivery timeline possible
 - [ ] Fill in the Reflections section with input from team members
-- [ ] Add detail on what made the fast delivery timeline possible
 - [ ] Check whether Prometric has any public quotes available
 - [ ] Confirm the June–October 2020 timeline
-- [ ] Review framing of Greyshore/Understory connection — does "several Understory team members contributed during their time at Greyshore" feel accurate?
+- [ ] Review framing of Greyshore/Understory connection
