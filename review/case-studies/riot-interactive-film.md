@@ -1,6 +1,6 @@
 # From Emotion Recognition to Eye Tracking: Building Interactive Film Technology with Karen Palmer
 
-_Through the ThoughtWorks Arts residency program, we partnered with immersive filmmaker Karen Palmer to build the technology behind two groundbreaking interactive installations — RIOT and Perception iO._
+_Through the ThoughtWorks Arts residency program, Webs contributed to the technology behind two interactive installations by immersive filmmaker Karen Palmer — RIOT and Perception iO._
 
 ---
 
@@ -8,9 +8,9 @@ _Through the ThoughtWorks Arts residency program, we partnered with immersive fi
 
 | Field | Value |
 |---|---|
-| **Client** | Karen Palmer, Artist in Residence — ThoughtWorks Arts |
+| **Artist** | Karen Palmer, Artist in Residence — ThoughtWorks Arts |
 | **Industry** | Interactive Media / Arts & Technology |
-| **Services Provided** | Implementation + Product Leadership |
+| **Role** | Developer, Product & Project Leadership |
 | **Team** | Volunteer-based, rotating contributors |
 | **Key Technologies** | Python, Keras, TensorFlow, Electron, Tobii Eye Tracker |
 | **Recognition** | Cooper Hewitt Smithsonian Design Museum exhibition, STARTS Prize 2020 Honorable Mention, Ars Electronica |
@@ -33,17 +33,17 @@ The installation was commissioned for *Face Values: Exploring Artificial Intelli
 
 ---
 
-### Our Approach
+### The Work
 
 **RIOT — Building the Foundation**
 
-Through the ThoughtWorks Arts residency program, we built two core systems from scratch: [EmoPy](https://github.com/thoughtworksarts/EmoPy), a deep neural net toolkit for facial expression recognition capable of classifying seven emotions (happiness, anger, fear, surprise, disgust, sadness, and calm/neutral), and the [RIOT Storyline Manager](https://github.com/thoughtworksarts/riot-storyline-manager), an Electron-based application that managed the branching video structure via XML configuration.
+Through the ThoughtWorks Arts residency program, Webs contributed to two core systems built from scratch: [EmoPy](https://github.com/thoughtworksarts/EmoPy), a deep neural net toolkit for facial expression recognition capable of classifying seven emotions (happiness, anger, fear, surprise, disgust, sadness, and calm/neutral), and the [RIOT Storyline Manager](https://github.com/thoughtworksarts/riot-storyline-manager), an Electron-based application that managed the branching video structure via XML configuration.
 
 The machine learning work was a first foray into ML — working through dataset challenges hands-on, iterating on models, and learning by doing. With a volunteer team and no formal structure, coordination was essential: assigning people to roles, keeping the technical direction cohesive as contributors rotated in and out, and making sure the emotion recognition and storyline management workstreams stayed aligned. It was also a first taste of product and project leadership — discovering that skills honed over a decade of teaching could translate directly into guiding technical teams.
 
 **Perception iO — Layering on Hardware**
 
-Perception iO took the proven RIOT foundation and added [Tobii eye tracking](https://github.com/thoughtworksarts/perception-eye-tracking) to capture where the viewer was looking — specifically, who they showed empathy toward. The same storyline manager and facial emotion recognition powered the core experience, but hardware brought a new category of challenge: vendor coordination with Tobii, software integration, and designing the physical installation to work within the constraints of a museum environment.
+Webs also contributed to Perception iO, which took the proven RIOT foundation and added [Tobii eye tracking](https://github.com/thoughtworksarts/perception-eye-tracking) to capture where the viewer was looking — specifically, who they showed empathy toward. The same storyline manager and facial emotion recognition powered the core experience, but hardware brought a new category of challenge: vendor coordination with Tobii, software integration, and designing the physical installation to work within the constraints of a museum environment.
 
 ---
 
@@ -57,7 +57,7 @@ Perception iO took the proven RIOT foundation and added [Tobii eye tracking](htt
 | **Cooper Hewitt Exhibition** | Perception iO shown at the Smithsonian Design Museum, Sept 2019 – May 2020 |
 | **STARTS Prize 2020** | Honorable mention from the European Commission's Science, Technology & the Arts program |
 | **Ars Electronica** | Exhibited at *In Kepler's Gardens* |
-| **Thought Leadership** | Published [research on AI and criminal justice bias](https://www.thoughtworks.com/en-us/insights/blog/how-artificial-intelligence-transforming-criminal-justice-system) during the residency |
+| **Thought Leadership** | Webs published [research on AI and criminal justice bias](https://www.thoughtworks.com/en-us/insights/blog/how-artificial-intelligence-transforming-criminal-justice-system) during the residency |
 
 ---
 
@@ -69,9 +69,9 @@ Perception iO took the proven RIOT foundation and added [Tobii eye tracking](htt
 
 ### Reflections
 
-This work also prompted deeper research into how AI is applied in high-stakes domains like criminal justice. During the residency, we published an [article exploring AI bias in judicial decision-making](https://www.thoughtworks.com/en-us/insights/blog/how-artificial-intelligence-transforming-criminal-justice-system). That article cited research — including a widely referenced study on how judges' rulings varied based on whether they'd eaten lunch — that has since failed to replicate.
+This work also prompted deeper research into how AI is applied in high-stakes domains like criminal justice. During the residency, Webs published an [article exploring AI bias in judicial decision-making](https://www.thoughtworks.com/en-us/insights/blog/how-artificial-intelligence-transforming-criminal-justice-system). That article cited research — including a widely referenced study on how judges' rulings varied based on whether they'd eaten lunch — that has since failed to replicate.
 
-That experience reinforced something important: working in AI demands ongoing scrutiny of the research you build on, not just the code you write. Claims that feel intuitive aren't automatically valid, and the stakes of embedding flawed assumptions into automated systems are real. It's a lesson that continues to shape how we approach AI and data-driven projects today — with more rigor, more skepticism, and a deeper respect for the gap between a compelling finding and a reliable one.
+That experience reinforced something important: working in AI demands ongoing scrutiny of the research you build on, not just the code you write. Claims that feel intuitive aren't automatically valid, and the stakes of embedding flawed assumptions into automated systems are real. It's a lesson that continues to shape how Webs approaches AI and data-driven projects today — with more rigor, more skepticism, and a deeper respect for the gap between a compelling finding and a reliable one.
 
 ---
 
@@ -99,5 +99,4 @@ _Items for the author to revisit before publishing:_
 - [ ] Reach out to Karen Palmer for a testimonial quote
 - [ ] Add screenshots or diagrams of the installations
 - [ ] Review the Reflections section — does the tone feel right?
-- [ ] Confirm framing of ThoughtWorks connection (currently using Option B)
 - [ ] Review whether any details about the volunteer team need adjusting
