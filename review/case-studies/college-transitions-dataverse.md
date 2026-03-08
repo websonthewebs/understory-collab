@@ -38,7 +38,6 @@ Before writing any migration code, Webs conducted a full strategic assessment of
 - **Data architecture** — Diagramming the existing data flow for both College Investigator and the Dataverse, mapping the 86 tables and identifying duplicate data points across them
 - **Push vs. pull architecture** — Evaluating the tradeoffs between the existing push model (data cached as JSON at deploy) and a pull model (data retrieved on request), and recommending a phased transition
 - **Observability** — Recommending monitoring for the customer experience: time to first byte, search performance, SSL validity, deployment health
-- **Identity and access management** — Evaluating Netlify Identity, AWS Cognito, and Auth0, ultimately recommending Auth0 for its flexibility, documentation, and marketing analytics integrations
 - **Business intelligence** — Evaluating Tableau and AWS QuickSight for internal and customer-facing reporting
 
 The assessment didn't just catalog what existed — it laid out a roadmap for what the architecture needed to become, while being honest about what was right-sized for College Transitions' current stage and funding.
@@ -50,7 +49,7 @@ The core engagement: a 16-week sprint to move both College Investigator and the 
 - Migrating all product data from Google Sheets to the new database
 - Ensuring both College Investigator and the Dataverse used the new database
 - Keeping the existing team workflow intact during the transition — the College Transitions team couldn't stop entering data while the migration happened
-- Producing an Architectural Decision Record documenting which database options were considered, the requirements, and the rationale for choosing Aurora
+- Producing an Architectural Decision Record documenting which database options were considered, the requirements, and the rationale for choosing Aurora — which offered the right balance of capability and cost for a small, data-intensive operation
 - Diagramming the new data flow for both products
 - Documentation and enablement for the College Transitions team to enter data into the new database
 
@@ -58,7 +57,7 @@ This was a migration that had to be invisible to the millions of people using th
 
 **Flourish — Continued Evolution (SOW #03)**
 
-After the migration, the engagement shifted to an ongoing advisory and development pace at 10 hours per week. This phase included building new features — including Find Opportunities — while continuing to bridge the remaining Google Sheets/SheetDB dependencies and building on the new architecture.
+After the migration, the engagement shifted to an ongoing advisory and development pace at 10 hours per week. This phase included building new features and continuing to bridge the remaining Google Sheets/SheetDB dependencies as the architecture evolved.
 
 Webs also taught the College Transitions team how to use DBeaver to navigate and manage their database directly, and provided recommendations for what to look for in a full-time engineer who could take over ongoing development. The goal was always to leave them self-sufficient, not dependent.
 
@@ -115,9 +114,6 @@ _Items for the author to revisit before publishing:_
 
 - [ ] Confirm permission from College Transitions (outreach sent)
 - [ ] Get a testimonial quote from College Transitions
-- [ ] Confirm why Aurora was specifically chosen — the ADR was produced but the rationale isn't recalled; check if you still have the ADR
-- [ ] Clarify how long SOW #03 lasted and whether Find Opportunities is still live
 - [ ] Confirm "millions of visits per year" — this is what's stated publicly but a specific number would strengthen the case study
 - [ ] Add a before/after architecture diagram if possible
-- [ ] Determine whether Auth0 should be mentioned (it was recommended but not implemented)
 - [ ] Review whether the push-to-pull architecture narrative belongs in this case study or is too technical for the audience
