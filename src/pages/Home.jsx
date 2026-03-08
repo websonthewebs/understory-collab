@@ -19,6 +19,34 @@ function Home() {
         </div>
       </section>
 
+      <section className="services-preview" aria-labelledby="services-heading">
+        <div className="section-container">
+          <h2 id="services-heading">What We Do</h2>
+          <div className="services-grid">
+            <article className="service-card">
+              <h3>Advisory</h3>
+              <p>
+                Strategic consulting, technology assessment, and digital transformation
+                guidance to help you make informed decisions.
+              </p>
+              <Link to="/advisory" className="service-link">
+                Learn more<span className="sr-only"> about advisory services</span>
+              </Link>
+            </article>
+            <article className="service-card">
+              <h3>Implementation</h3>
+              <p>
+                Full-stack development, DevOps, and specialized expertise in accessibility,
+                education technology, and more.
+              </p>
+              <Link to="/implementation" className="service-link">
+                Learn more<span className="sr-only"> about implementation services</span>
+              </Link>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="about" aria-labelledby="about-heading">
         <div className="section-container">
           <h2 id="about-heading">Who We Are</h2>
@@ -50,34 +78,6 @@ function Home() {
                 <p>We understand both business drivers and technical constraints.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="services-preview" aria-labelledby="services-heading">
-        <div className="section-container">
-          <h2 id="services-heading">What We Do</h2>
-          <div className="services-grid">
-            <article className="service-card">
-              <h3>Advisory</h3>
-              <p>
-                Strategic consulting, technology assessment, and digital transformation
-                guidance to help you make informed decisions.
-              </p>
-              <Link to="/advisory" className="service-link">
-                Learn more<span className="sr-only"> about advisory services</span>
-              </Link>
-            </article>
-            <article className="service-card">
-              <h3>Implementation</h3>
-              <p>
-                Full-stack development, DevOps, and specialized expertise in accessibility,
-                education technology, and more.
-              </p>
-              <Link to="/implementation" className="service-link">
-                Learn more<span className="sr-only"> about implementation services</span>
-              </Link>
-            </article>
           </div>
         </div>
       </section>

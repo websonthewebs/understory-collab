@@ -6,11 +6,20 @@ import './Layout.css'
 function Layout() {
   return (
     <div className="layout">
-      <a href="#main-content" className="skip-link">
+      <button
+        className="skip-link"
+        onClick={() => {
+          const main = document.getElementById('main-content')
+          if (main) {
+            main.focus()
+            main.scrollIntoView()
+          }
+        }}
+      >
         Skip to main content
-      </a>
+      </button>
       <Navigation />
-      <main id="main-content" className="main-content">
+      <main id="main-content" className="main-content" tabIndex="-1">
         <Outlet />
       </main>
       <Footer />
