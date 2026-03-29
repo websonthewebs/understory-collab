@@ -84,14 +84,14 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 ---
 
-### Question 5: How many people on your team could deploy to production without help?
+### Question 5: Think of a bad idea you've had recently. Now name the specific people who would tell you it's a bad idea. How many can you name?
 
-*What this measures: Knowledge concentration — single points of ignition.*
+*What this measures: Psychological safety and intellectual honesty. If nobody pushes back on bad ideas, every other problem on this list compounds unchecked. Naming specific people is the gate — it keeps the answer honest.*
 
-- **A.** Most of the team. It's well-documented and practiced.
-- **B.** A few key people, but we're working on spreading that knowledge.
-- **C.** One or two. They're the ones who know how it all works.
-- **D.** There's one person. We don't talk about what happens if they leave.
+- **A.** 4 or more. I have people around me who will tell me when I'm wrong, and I can name them right now.
+- **B.** 2–3 people. A small circle, but they're honest with me.
+- **C.** 1 person, maybe. And I'm not sure they'd speak up every time.
+- **D.** I'm struggling to name anyone. Or I can't think of a recent bad idea I've had.
 
 | Answer | Points |
 |---|---|
