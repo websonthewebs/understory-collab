@@ -70,10 +70,10 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 *What this measures: Revenue discipline — whether growth is fuel or accelerant on an existing fire. Asking about what already happened instead of a hypothetical, because it's harder to lie about the past than about what you'd do next time.*
 
-- **A.** We scoped it well. The custom work was delivered and it didn't create ongoing baggage.
-- **B.** It got done, but it took longer than expected and pulled people off other priorities.
-- **C.** We're still maintaining it. It sits in the codebase making things more complicated than they need to be.
-- **D.** It's one of several. We have custom logic for specific customers that nobody wants to touch, and it's slowing everything else down.
+- **A.** We delivered it and moved on.
+- **B.** It took longer than expected but we got it done.
+- **C.** We're still maintaining it.
+- **D.** That's happened more than once.
 
 | Answer | Points |
 |---|---|
