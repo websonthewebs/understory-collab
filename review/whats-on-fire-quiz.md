@@ -66,14 +66,14 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 ---
 
-### Question 4: Think about the last time your organization took on a big customer deal that required custom work. What happened after?
+### Question 4: A customer offers you a multi-million dollar deal. It requires custom work. What's the first thing that happens?
 
-*What this measures: Revenue discipline — whether growth is fuel or accelerant on an existing fire. Asking about what already happened instead of a hypothetical, because it's harder to lie about the past than about what you'd do next time.*
+*What this measures: Revenue discipline — not whether custom deals create maintenance burden, but whether the organization has the discipline to ask questions before taking the money. Companies that say yes first and ask questions later build things only one customer uses, capture the inbound value, then carry the maintenance cost forever.*
 
-- **A.** We delivered it and moved on.
-- **B.** It took longer than expected but we got it done.
-- **C.** We're still maintaining it.
-- **D.** That's happened more than once.
+- **A.** We'd need to understand what they're actually asking for before we could answer.
+- **B.** We'd figure out how to make it work.
+- **C.** We'd take it. That's a lot of money.
+- **D.** We'd already be planning the implementation.
 
 | Answer | Points |
 |---|---|
@@ -159,7 +159,7 @@ No PII collected in analytics. Email capture is a separate, optional step.
 ## Design Notes
 
 - **Q5 is intentionally inverted.** A is the alarming answer, D is the healthy one. This prevents autopiloting to A as the "good" answer. Scoring is reversed to match (A=4, D=1).
-- **Q4 is past tense, not hypothetical.** People self-deceive about what they "would do." Asking what already happened forces honesty.
+- **Q4 is a hypothetical but the answers are behaviors, not judgments.** The question tests whether the org asks questions before taking money. "We'd figure out how to make it work" and "We'd already be planning the implementation" both sound positive and proactive — but they skip the step of evaluating whether to do it at all. The only healthy answer is the one that starts with understanding what's being asked.
 - **Q1 uses a customer-to-escalation ratio** rather than absolute numbers or company headcount. Number of escalations is a proxy for customers with problems — ratioing that against total customers normalizes for company size naturally. A company with 200 escalations out of 500 customers is in a fundamentally different place than 200 out of 50,000. The D answer ("we don't know the ratio") is arguably the most telling — if you're not tracking it, you can't manage it.
 - **Q6 answers are calibrated by magnitude, not specifics.** "Rebuild our deployment pipeline" is a specific scenario that won't resonate with everyone. "Rip out and replace a significant part of how we work" is universal.
 - **Communication as infrastructure** is the deeper thesis connecting Q1 (escalations = communication failure signal) and Q5 (psychological safety = communication infrastructure). This framing may be worth surfacing in the white papers.
