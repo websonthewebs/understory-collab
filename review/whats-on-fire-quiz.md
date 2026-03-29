@@ -12,14 +12,14 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 ## Questions & Answer Options
 
-### Question 1: Think about the total number of customer escalations your organization handled last year. For your company's size, that number feels...
+### Question 1: Roughly how many of your customers escalated a problem last year? What ratio of your total customer base is that?
 
-*What this measures: Whether your communication infrastructure is working — escalations are a signal that something upstream failed. Rather than setting arbitrary thresholds by company size, we ask the person who knows their context to make the honest call.*
+*What this measures: Whether your communication infrastructure is working — escalations are a signal that something upstream failed. The ratio of escalations to total customers normalizes for company size naturally and frames escalations as what they are: customers who had a problem bad enough to escalate.*
 
-- **A.** Low. Most issues get resolved before they become escalations.
-- **B.** About what you'd expect. Some are inevitable, and we handle them.
-- **C.** Higher than it should be. We talk about reducing it but the number doesn't move.
-- **D.** Out of control. Escalations are a constant, and we've normalized it.
+- **A.** A small fraction. Escalations are the exception, not the pattern.
+- **B.** A noticeable percentage, but within what we'd expect for our industry and scale.
+- **C.** Higher than we're comfortable with. The ratio has been climbing or staying stubbornly flat.
+- **D.** We don't actually know the ratio — or we do, and we've stopped talking about it.
 
 | Answer | Points |
 |---|---|
@@ -160,7 +160,7 @@ No PII collected in analytics. Email capture is a separate, optional step.
 
 - **Q5 is intentionally inverted.** A is the alarming answer, D is the healthy one. This prevents autopiloting to A as the "good" answer. Scoring is reversed to match (A=4, D=1).
 - **Q4 is past tense, not hypothetical.** People self-deceive about what they "would do." Asking what already happened forces honesty.
-- **Q1 uses self-assessment relative to company size** rather than absolute numbers. A mid-size company with 2,200 escalations/year and a startup with 50 are in different contexts — the person taking the quiz knows whether their number is too high.
+- **Q1 uses a customer-to-escalation ratio** rather than absolute numbers or company headcount. Number of escalations is a proxy for customers with problems — ratioing that against total customers normalizes for company size naturally. A company with 200 escalations out of 500 customers is in a fundamentally different place than 200 out of 50,000. The D answer ("we don't know the ratio") is arguably the most telling — if you're not tracking it, you can't manage it.
 - **Q6 answers are calibrated by magnitude, not specifics.** "Rebuild our deployment pipeline" is a specific scenario that won't resonate with everyone. "Rip out and replace a significant part of how we work" is universal.
 - **Communication as infrastructure** is the deeper thesis connecting Q1 (escalations = communication failure signal) and Q5 (psychological safety = communication infrastructure). This framing may be worth surfacing in the white papers.
 
