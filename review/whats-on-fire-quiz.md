@@ -12,14 +12,14 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 ## Questions & Answer Options
 
-### Question 1: How many escalations hit leadership in the past year?
+### Question 1: Think about the total number of customer escalations your organization handled last year. For your company's size, that number feels...
 
-*What this measures: Whether the fire is visible from above — are problems reaching the canopy?*
+*What this measures: Whether your communication infrastructure is working — escalations are a signal that something upstream failed. Rather than setting arbitrary thresholds by company size, we ask the person who knows their context to make the honest call.*
 
-- **A.** Almost none. Issues get resolved before leadership hears about them.
-- **B.** A handful. Mostly around releases or specific customers.
-- **C.** Regularly. Leadership is involved in technical issues monthly.
-- **D.** Constantly. There's an escalation channel and it's always active.
+- **A.** Low. Most issues get resolved before they become escalations.
+- **B.** About what you'd expect. Some are inevitable, and we handle them.
+- **C.** Higher than it should be. We talk about reducing it but the number doesn't move.
+- **D.** Out of control. Escalations are a constant, and we've normalized it.
 
 | Answer | Points |
 |---|---|
@@ -66,32 +66,14 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 ---
 
-### Question 4: A new customer offers you a multi-million dollar deal. It requires custom work. What happens?
+### Question 4: Think about the last time your organization took on a big customer deal that required custom work. What happened after?
 
-*What this measures: Revenue discipline — whether growth is fuel or accelerant on an existing fire.*
+*What this measures: Revenue discipline — whether growth is fuel or accelerant on an existing fire. Asking about what already happened instead of a hypothetical, because it's harder to lie about the past than about what you'd do next time.*
 
-- **A.** We'd evaluate it carefully against our roadmap and say no if it doesn't fit.
-- **B.** We'd take it but ring-fence the custom work so it doesn't pollute the core.
-- **C.** We'd probably take it and figure out the technical implications later.
-- **D.** We've done this before. We're still maintaining the custom work from the last time.
-
-| Answer | Points |
-|---|---|
-| A | 1 |
-| B | 2 |
-| C | 3 |
-| D | 4 |
-
----
-
-### Question 5: Think of a bad idea you've had recently. Now name the specific people who would tell you it's a bad idea. How many can you name?
-
-*What this measures: Psychological safety and intellectual honesty. If nobody pushes back on bad ideas, every other problem on this list compounds unchecked. Naming specific people is the gate — it keeps the answer honest.*
-
-- **A.** 4 or more. I have people around me who will tell me when I'm wrong, and I can name them right now.
-- **B.** 2–3 people. A small circle, but they're honest with me.
-- **C.** 1 person, maybe. And I'm not sure they'd speak up every time.
-- **D.** I'm struggling to name anyone. Or I can't think of a recent bad idea I've had.
+- **A.** We scoped it well. The custom work was delivered and it didn't create ongoing baggage.
+- **B.** It got done, but it took longer than expected and pulled people off other priorities.
+- **C.** We're still maintaining it. It sits in the codebase making things more complicated than they need to be.
+- **D.** It's one of several. We have custom logic for specific customers that nobody wants to touch, and it's slowing everything else down.
 
 | Answer | Points |
 |---|---|
@@ -102,14 +84,32 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 ---
 
-### Question 6: If you had a magic wand, what would you change about your technical environment?
+### Question 5: Think of a bad idea you've had. Among the people you currently work with, name the specific individuals who would tell you it's a bad idea. How many can you name?
 
-*What this measures: Where the existential pain lives.*
+*What this measures: Psychological safety and intellectual honesty — communication as infrastructure. If nobody pushes back on bad ideas, every other problem on this list compounds unchecked. Naming specific people is the gate — it keeps the answer honest. And if you can't think of a bad idea you've had, that's an answer too.*
 
-- **A.** Honestly, small things. We're in pretty good shape.
-- **B.** I'd modernize a few legacy systems that slow us down.
-- **C.** I'd rebuild our deployment pipeline and testing from scratch.
-- **D.** I'd start over. The foundation isn't supporting where we need to go.
+- **A.** I'm struggling to name anyone.
+- **B.** 1 person, maybe.
+- **C.** 2–3 people. A small circle, but they're honest with me.
+- **D.** 4 or more. I can name them right now.
+
+| Answer | Points |
+|---|---|
+| A | 4 |
+| B | 3 |
+| C | 2 |
+| D | 1 |
+
+---
+
+### Question 6: If you had a magic wand and could change one thing about your technical environment, how big is that change?
+
+*What this measures: Where the existential pain lives. The answers are calibrated by magnitude, not by specific technology — because the person taking this knows their own landscape better than we do. Consider adding a free-text capture ("What would you change?") or encouraging a screenshot of their answer for their own records.*
+
+- **A.** It's a nice-to-have. Things are working, I'd just polish the edges.
+- **B.** It's a meaningful improvement. There's something specific holding us back and I know what it is.
+- **C.** It's a major overhaul. I'd rip out and replace a significant part of how we work.
+- **D.** I'd start over. What we have isn't going to get us where we need to go.
 
 | Answer | Points |
 |---|---|
@@ -156,9 +156,18 @@ No PII collected in analytics. Email capture is a separate, optional step.
 
 ---
 
+## Design Notes
+
+- **Q5 is intentionally inverted.** A is the alarming answer, D is the healthy one. This prevents autopiloting to A as the "good" answer. Scoring is reversed to match (A=4, D=1).
+- **Q4 is past tense, not hypothetical.** People self-deceive about what they "would do." Asking what already happened forces honesty.
+- **Q1 uses self-assessment relative to company size** rather than absolute numbers. A mid-size company with 2,200 escalations/year and a startup with 50 are in different contexts — the person taking the quiz knows whether their number is too high.
+- **Q6 answers are calibrated by magnitude, not specifics.** "Rebuild our deployment pipeline" is a specific scenario that won't resonate with everyone. "Rip out and replace a significant part of how we work" is universal.
+- **Communication as infrastructure** is the deeper thesis connecting Q1 (escalations = communication failure signal) and Q5 (psychological safety = communication infrastructure). This framing may be worth surfacing in the white papers.
+
 ## Open Questions
 
 - Do we want a "share your results" option? Could drive organic traffic but might feel gimmicky.
-- Should question order be fixed or randomized? Fixed creates a narrative arc. Randomized prevents pattern gaming.
+- Should question order be fixed or randomized? Fixed creates a narrative arc (symptoms > discipline > culture > existential). Randomized prevents pattern gaming.
 - Do we want a progress bar? Probably yes for 6 questions — it sets expectations.
-- The D answers are intentionally a little funny/dark. Does the team think that tone works, or should we soften?
+- **Q6 free-text capture:** Should we add an optional "What would you change?" text field? Or just encourage a screenshot? Free text gives us richer data but adds friction. Screenshot is low-friction but we don't capture it.
+- **Q4 edge case:** What if they've never taken a big custom deal? Do we need a "this hasn't happened to us" option, or is that rare enough in our target audience to ignore?
