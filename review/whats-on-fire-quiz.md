@@ -12,14 +12,14 @@ A 6-question multiple choice quiz that helps engineering and technology leaders 
 
 ## Questions & Answer Options
 
-### Question 1: Roughly how many of your customers escalated a problem last year? What ratio of your total customer base is that?
+### Question 1: What percentage of your customers escalated a problem last year?
 
-*What this measures: Whether your communication infrastructure is working — escalations are a signal that something upstream failed. The ratio of escalations to total customers normalizes for company size naturally and frames escalations as what they are: customers who had a problem bad enough to escalate.*
+*What this measures: Whether your communication infrastructure is working — escalations are a signal that something upstream failed. The ratio of escalations to total customers normalizes for company size naturally.*
 
-- **A.** A small fraction. Escalations are the exception, not the pattern.
-- **B.** A noticeable percentage, but within what we'd expect for our industry and scale.
-- **C.** Higher than we're comfortable with. The ratio has been climbing or staying stubbornly flat.
-- **D.** We don't actually know the ratio — or we do, and we've stopped talking about it.
+- **A.** Less than 5%.
+- **B.** 10–20%.
+- **C.** 30% or more.
+- **D.** We don't know.
 
 | Answer | Points |
 |---|---|
