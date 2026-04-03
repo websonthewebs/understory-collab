@@ -264,7 +264,7 @@ function HubSpotForm({ portalId, crisisType }) {
 
     try {
       const response = await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${window.__HUBSPOT_QUIZ_FORM_ID || 'FORM_ID_PLACEHOLDER'}`,
+        `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/3b9315b4-fda0-4ea5-a7a9-4516ba4dfb59`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
