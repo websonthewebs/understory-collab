@@ -28,9 +28,15 @@ Here's what leadership typically sees: uptime metrics, sprint velocity, feature 
 
 Here's what the team typically knows: which parts of the codebase nobody wants to touch, which tests don't actually catch anything, which "quick fix" from two years ago is load-bearing, how many things have to go right for a release to go smoothly.
 
-This gap isn't usually caused by dishonesty. It's caused by incentive structures. Engineers learn quickly which problems the organization wants to hear about and which ones get met with "we'll get to that later." After enough "laters," people stop raising the alarm. They adapt around the problems instead of escalating them.
+This gap isn't usually caused by dishonesty. It's structural. Without deliberate systems for checking in on what's happening on the ground — systems that don't feel like micromanagement — leaders are always going to get a version of the truth that makes things look best. Nobody wants to fail their boss. Nobody wants to be the one who says "this is broken and I don't have a fix." So they adapt. They work around the problems. And leadership never hears about it.
 
-The most telling symptom of a smolder isn't a specific technical issue. It's when your most experienced engineers have stopped advocating for fixes they know are needed. That's not apathy — that's learned helplessness. They've internalized that the answer is "not now," so they've stopped asking.
+The gap gets worse when leaders fall into a common trap: requiring the people who report a problem to also deliver the solution. On the surface, this sounds like good delegation — empowering your team to own their challenges. In practice, it punishes honesty. If raising a concern means you just assigned yourself a project on top of your existing work, people learn quickly to stop raising concerns.
+
+Solutions should be a collaborative effort. Your direct reports see the problem from the ground. You have institutional power, budget authority, and cross-team visibility they don't. If you put it on your people to both identify and solve every problem, what exactly is your role as a leader? Paving the way for a solution is your job. Collaborating on what that solution looks like is the work you should be doing together.
+
+There's another pattern that's equally damaging: the assumption that your experience gives you a more accurate picture than your team's daily reality does. "They're just complaining. They don't know how hard it is. I've seen worse." Maybe you have. But you're also far removed from the ground. You don't know what you don't know. A VP once discovered — months after the fact — that their QA team had been carrying nearly double the workload everyone assumed. The additional responsibilities had accumulated gradually, never surfaced in any planning conversation, and nobody had thought to ask. When you're that far from the daily work, invisible burdens stay invisible unless you actively look for them.
+
+The question every leader in a smolder should be asking their team isn't "how's it going?" It's *"what am I not seeing?"* — and then believing the answer without requiring a presentation to prove it.
 
 ---
 
