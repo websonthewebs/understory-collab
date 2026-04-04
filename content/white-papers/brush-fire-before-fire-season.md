@@ -111,6 +111,8 @@ Here's what this actually produces. On a team that maintained this discipline, P
 
 **Let the team choose what to burn.** The engineers closest to the code know which debt causes the most friction. Give them the capacity and let them prioritize. This builds ownership and ensures the work targets the things that actually slow people down, not the things that look worst on a slide.
 
+**Don't sneak in technical projects.** This is a common and understandable instinct. The team knows something needs to be fixed, they don't think they can get approval for it, so they bury it inside a feature sprint or do it quietly on the side. Resist this. Treat technical projects like features. Put them through the same planning process. Make them visible to product and finance. If you can't articulate why the work is needed and what it costs the business if it doesn't get done, that's a sign you need to sharpen the case, not hide the work. And if you *can* articulate it but leadership still says no, at least the decision is explicit and the risk is documented. Sneaking in work means nobody knows it happened, nobody learns to value it, and the next time something needs attention you're back to sneaking again.
+
 **Celebrate the boring wins.** Nobody throws a party when you upgrade a database driver or automate a manual deployment step. But these are the wins that prevent the 2 AM phone calls. Acknowledging this work signals to the team that the organization values prevention, not just firefighting.
 
 ---
