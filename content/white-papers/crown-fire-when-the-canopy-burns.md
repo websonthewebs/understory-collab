@@ -1,0 +1,148 @@
+# When the Canopy Burns
+## A Playbook for Engineering Organizations in Active Crisis
+
+## You can't hire your way out of a crown fire. You need a different kind of intervention.
+
+If you're reading this, the fire is visible. Leadership knows. Customers know. Your team knows. The question is no longer whether something needs to change. The question is what to change first, and how to do it without making things worse.
+
+This paper is for the leader who's in it right now. Not the one who suspects there might be a problem. The one who's managing escalations, watching releases slip, and fielding questions from the board about why things aren't getting better despite the investment. The one whose team is spending more energy keeping things running than building what's next.
+
+Here's what we'll say upfront: crown fires are addressable. Organizations come back from this. But the path back requires discipline, honest assessment, and a willingness to resist the instinct to move fast just because everything feels urgent.
+
+---
+
+## How Crown Fires Develop
+
+Crown fires don't start in the canopy. They start on the ground. A smolder that nobody addressed. Deployment friction that compounded. Knowledge concentration that went unmanaged. One-customer features that accumulated. Tech debt that the team raised and leadership deferred.
+
+At some point, the conditions shifted. A key person left. A big customer arrived. The market demanded speed the platform couldn't deliver. And the brush that had been accumulating quietly caught fire in a way that was no longer contained to the understory.
+
+What makes a crown fire different from a smolder is visibility. In a smolder, the team knows and leadership doesn't. In a crown fire, everyone knows. Leadership is involved in technical decisions they shouldn't need to be involved in. Releases are events that require executive attention. Customer escalations are routine. And when a significant opportunity shows up, the honest reaction across the organization is anxiety, because nobody is confident the platform can support it.
+
+The dangerous thing about a crown fire is not the fire itself. It's the decisions people make in response to it.
+
+---
+
+## Why Adding Headcount Usually Makes It Worse
+
+The most common response to a crown fire is to hire. The logic feels sound: we're short on capacity, we need more people, more people means more output. In a healthy organization, that logic holds. In a crown fire, it inverts.
+
+New engineers need onboarding. In a crown fire environment, the people who would normally onboard them are the same people fighting fires. Every hour a senior engineer spends ramping up a new hire is an hour they're not spending on the crisis. And the new hires, no matter how talented, cannot be effective in a codebase they don't yet understand, surrounded by undocumented systems and tribal knowledge that takes months to absorb.
+
+The result is a brief period where things actually get worse. Coordination overhead increases. Communication channels multiply. The people who were already stretched thin are now stretched thinner, because they're carrying the crisis load plus the onboarding load. Six months later, the new hires may be contributing. But the organization just burned six months it didn't have.
+
+This is not an argument against hiring. It's an argument against hiring as a crisis response. Hire when the foundation is stable enough for new people to stand on. Not before.
+
+---
+
+## Assessment Before Action
+
+When things are actively on fire, the instinct is to start fixing immediately. Pick the thing that's burning brightest and throw resources at it. Move fast. Show progress.
+
+Resist this.
+
+We've walked into organizations where the stated problem was "we need to fix our deployment pipeline and migrate to AWS." And sometimes the deployment pipeline does need fixing and the migration does need to happen. But when we sit down and actually map what's happening, we find that the deployment pipeline is not the root cause of the crisis. The root cause is that one person in the middle of a critical process is a single point of failure, and no amount of pipeline improvement changes that. You can build the most elegant CI/CD system in the world and it will not matter if Carol still has to flip the switches.
+
+The pushback we hear most often is "we don't have time for an assessment. We're drowning." And the answer is: you were drowning before you hired us. A couple of weeks to make sure you're fixing the right things is going to save more in the long run than rushing to a solution that lacks context. Applying the same fix to every organization is what amateurs do. The problems may look similar from the outside, but the root causes are specific to your people, your systems, and your history.
+
+**What an honest assessment looks like:**
+
+**Map the actual workflow, not the documented one.** Get every person involved in a critical process into the same room and walk through it step by step. You will find steps that nobody knew existed. You will find single points of failure. You will find tasks that were assigned to people who are no longer there. The difference between the process you think you have and the process you actually have is where the real problems live.
+
+**Identify what's on fire vs. what's smoldering vs. what's already burned.** Not everything that feels urgent is equally important. Some systems are actively failing and need immediate attention. Some are degraded but stable enough to wait. Some have already failed and the organization has routed around them. Treating everything as equally urgent guarantees you'll fix none of it well.
+
+**Find the load-bearing people.** In every crown fire, there are a small number of people holding a disproportionate amount of the system together. They're the ones getting paged at 2 AM. They're the ones who get pulled into every incident. They're the ones who can't take vacation because nobody else can do what they do. These people are simultaneously your most important asset and your biggest risk. If you lose them, the crown fire becomes a firestorm.
+
+**Separate symptoms from causes.** Slow releases are a symptom. Frequent escalations are a symptom. The causes are further upstream: missing automation, knowledge concentration, architectural decisions that made sense five years ago and don't anymore, organizational structures that create bottlenecks. Fix symptoms and they come back. Fix causes and the symptoms resolve.
+
+---
+
+## The Triage Framework
+
+Once you've assessed, you need a framework for deciding what to address first. In a crown fire, you cannot fix everything at once. You have to choose, and the choices have to be deliberate.
+
+**Stabilize first, improve second, build third.**
+
+The instinct is to jump to improvement or building because those feel like progress. Stabilization feels like treading water. But you cannot improve a system that's actively failing, and you cannot build on a foundation that's shifting. Stabilization means getting to a state where the current fires are contained and new fires aren't starting faster than you can respond to them.
+
+**Prioritize by dependency, not by pain.**
+
+The most painful problem is not always the most important one to fix first. Look for the problems that block other fixes. If your deployment process is so unreliable that you can't safely ship changes, then every other fix is blocked by that, because you can't deliver the fixes reliably. If knowledge concentration means only one person can troubleshoot production issues, then every incident response is bottlenecked by that person's availability. Find the constraint that constrains everything else, and start there.
+
+**Decide what to let burn.**
+
+This is the hardest part. In a crown fire, some things are going to continue to be broken for a while. You need to consciously decide which problems you're not going to address right now, communicate that decision to the team and to stakeholders, and accept the consequences. The alternative is spreading your limited capacity across too many fronts and making meaningful progress on none of them.
+
+**Decide what to let go entirely.**
+
+Some systems, features, or commitments are not worth saving. The custom implementation from five years ago that one customer uses and nobody understands? It may be time to sunset it. The internal tool that three people use but requires constant maintenance? It may be time to replace it with something off the shelf or retire it altogether. Crown fires are clarifying moments. They force you to ask which things are actually essential and which things you've been carrying out of inertia.
+
+---
+
+## Managing Stakeholders During Crisis
+
+Technical crises create communication challenges at every level of the organization. Leadership wants to know when it will be fixed. Customers want to know why things are broken. The team wants to know that someone has a plan.
+
+**With leadership and the board:**
+
+Be honest about the timeline and the tradeoffs. "We can stabilize the most critical systems in 30 days, but some lower-priority issues will persist for 90 days or more." This is a harder message to deliver than "we'll have it fixed soon," but it builds trust and it sets expectations that you can actually meet. Overpromising in a crisis is how you turn a technical problem into a credibility problem.
+
+**With customers:**
+
+Acknowledge the impact without over-explaining the technical details. Customers don't need to understand your deployment pipeline. They need to know that you understand their experience is degraded, that you're working on it, and that you'll communicate progress. Regular, brief updates are better than infrequent detailed ones.
+
+**With the team:**
+
+The people closest to the fire need two things: a clear priority order so they know what to work on, and visible leadership engagement so they know the organization takes this seriously. If leadership is asking the team to fix the crisis while simultaneously pushing for new features on the same timeline, the message is that the crisis isn't actually a priority. Protect the team's focus. Make the hard calls about what gets deferred so they don't have to.
+
+---
+
+## The 90-Day Stabilization Pattern
+
+Ninety days is not arbitrary. It's a realistic timeline for getting from active crisis to a state where the organization is reactive but no longer in freefall. It will not fix everything. It will get you to a place where you can start making intentional decisions instead of emergency ones.
+
+**Days 1 through 14: Assess and triage.**
+
+Map the real state of things. Identify the critical failure points. Talk to the people closest to the systems. Build the priority list. Resist the urge to start fixing before you understand what's actually broken.
+
+This is the phase where you'll face the most pressure to skip ahead. "We already know what's wrong, just start fixing it." The assessment almost always reveals things that contradict what leadership believes the problems are. Those two weeks buy you the clarity to fix the right things in the right order.
+
+**Days 15 through 45: Stabilize the critical path.**
+
+Address the top two or three issues from your triage. These are the problems that either affect customers directly or block every other improvement. The goal is not perfection. The goal is to stop the active bleeding and establish a baseline where new incidents are not outpacing your ability to respond.
+
+This is also when you start addressing the load-bearing people problem. Cross-train where you can. Document the critical knowledge. Begin shifting from a model where one person holds everything to a model where at least two people can handle any critical function.
+
+**Days 46 through 90: Build the foundation for sustained improvement.**
+
+With the critical fires contained, you can start working on the underlying causes. This is where you address the deployment pipeline, the test coverage, the monitoring gaps, the architectural debt. Not all of it, but the pieces that will have the highest leverage for ongoing stability.
+
+By day 90, the goal is a team that can describe their current state honestly, has a prioritized plan for continued improvement, and is no longer operating in crisis mode. There will still be significant work to do. But the difference between "we have a plan and we're executing it" and "we're drowning and we don't know where to start" is the difference between a recoverable situation and one that drives your best people out the door.
+
+---
+
+## When to Bring in Outside Help
+
+There's no shame in bringing in specialists. You wouldn't expect your primary care doctor to perform surgery. The question is how to evaluate outside help without getting burned again.
+
+**Look for people who insist on assessing before prescribing.** Anyone who tells you what to fix before they've looked at your specific situation is selling you a solution they already have, not the one you actually need.
+
+**Look for people who've seen your pattern before.** Crown fires share common characteristics, but the details matter. Experience with organizations at your stage, your scale, and in your general domain means less time spent learning your context and more time spent on the actual problems.
+
+**Look for people who plan to leave.** The right outside help works themselves out of a job. They stabilize, they transfer knowledge, they build your team's capacity to continue without them. If someone's engagement model depends on you needing them indefinitely, their incentives are misaligned with your recovery.
+
+**Beware the "rewrite everything" recommendation.** In a crown fire, the temptation to start over is enormous. Sometimes a rewrite or a major re-architecture is genuinely the right call. But more often, it's a way to avoid the harder work of understanding and improving what exists. A full rewrite is a multi-year commitment with its own risks. Make sure you've exhausted the alternatives before committing to one.
+
+---
+
+## About Understory Collaborative
+
+Understory Collaborative is a team of seasoned technologists who specialize in the work that happens beneath the surface. We're smokejumpers. We help organizations find the root cause of a crisis, stabilize what's critical, and build the foundation for sustained recovery.
+
+We assess before we prescribe. We've seen these patterns before. And we plan to leave your organization stronger than we found it.
+
+If anything in this paper sounded familiar, we should talk. Reach out at [contact@understorycollab.com](mailto:contact@understorycollab.com) or visit [understorycollab.com/contact](https://understorycollab.com/contact).
+
+---
+
+*This white paper is part of the "What's On Fire?" series from Understory Collaborative. Take the self-assessment at [understorycollab.com/quiz] to find out where your organization stands.*
