@@ -105,6 +105,14 @@ Acknowledge the impact without over-explaining the technical details. Customers 
 
 The people closest to the fire need two things: a clear priority order so they know what to work on, and visible leadership engagement so they know the organization takes this seriously. If leadership is asking the team to fix the crisis while simultaneously pushing for new features on the same timeline, the message is that the crisis isn't actually a priority. Protect the team's focus. Make the hard calls about what gets deferred so they don't have to.
 
+**Communicate in both directions.**
+
+This is one of the most common leadership failures in a crisis, and it often comes from good intentions. A leader fights hard behind closed doors to get their team more time, more resources, or more protection from competing priorities. They win some of those battles. But they never tell the team what they did, because they don't want to seem like they're asking for credit, or because they assume the team can see the results.
+
+The team cannot see the results. What the team sees is that they raised a problem and nothing visibly changed. They feel unheard. They lose trust. And the leader who was genuinely advocating for them has no idea that the team doesn't know.
+
+Actions are always louder than words, but actions that happen in rooms your team is not in are invisible. You have to communicate what you're doing, what you've secured, and what you're still fighting for. And if you've already burned your credibility through too many "we'll get to it" promises that never materialized, words alone will not rebuild it. You have to show something concrete. Cancel a feature to make room for stabilization work and tell the team why. Move a deadline and explain what that cost you politically. Put real action on the line where the team can see it. That's how you rebuild trust during a crisis.
+
 ---
 
 ## The 90-Day Stabilization Pattern
