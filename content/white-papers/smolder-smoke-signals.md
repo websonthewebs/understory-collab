@@ -79,6 +79,10 @@ Ask them: *What's the thing you're most worried about that nobody's working on?*
 
 These questions will surface the real risk map faster than any scanning tool or consultant report.
 
+But here's the prerequisite that makes all of this work: psychological safety. These questions only produce honest answers if the people you're asking believe that honesty won't be punished. If the last person who flagged a problem got assigned to fix it on their own time, or got told they were being negative, or watched their concern get dismissed in a leadership meeting, your team has already learned what happens when they speak up. They will tell you things are fine. They will give you the version of the truth that's safest for them. And you will continue to not see the smoke.
+
+Before you ask these questions, you have to have built the kind of environment where the answers can be real. If you haven't, that's the first thing to fix, because every other step in this section depends on it.
+
 **Then categorize what you find by consequence, not severity.**
 
 Not every piece of tech debt matters equally. The right question is not "how bad is this code?" but "what happens to our customers and our team if this fails?" A messy but isolated module is different from a messy module that sits in the critical path of your most important workflow.
@@ -149,7 +153,11 @@ If you took the quiz and landed here, you're in a position to act before the cri
 
 ## About Understory Collaborative
 
-[PLACEHOLDER — Need a few sentences from you about what Understory does, how you work with clients, and how to get in touch. I'll polish it to fit the tone of the paper.]
+Understory Collaborative is a team of seasoned technologists who specialize in the work that happens beneath the surface. We're smokejumpers. We help organizations clear the brush before a smolder becomes a bigger fire, and we bring the experience and clarity to help you see what's actually happening on the ground.
+
+Whether you need a focused assessment, hands-on technical leadership, or a partner to help you build the practices that prevent the next crisis, we meet you where you are.
+
+If anything in this paper sounded familiar, we should talk. Reach out at [contact@understorycollab.com](mailto:contact@understorycollab.com) or visit [understorycollab.com/contact](https://understorycollab.com/contact).
 
 ---
 
