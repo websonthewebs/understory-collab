@@ -39,7 +39,7 @@ You can release, but it takes more coordination than it should. There's a checkl
 
 Those few minutes add up. More importantly, deployment friction changes behavior. Teams batch more changes into each release because releases are expensive. Larger releases are harder to debug when something goes wrong. The cycle reinforces itself. The friction does not have to be dramatic to be costly.
 
-### 3. Undocumented Tribal Knowledge
+### 3. Undocumented Organizational Knowledge
 
 The system works because specific people know how it works. Not because it's documented. Not because the architecture is self-explanatory. Because Sarah has been here for five years and knows why that configuration is set the way it is, and because Marcus is the only one who's ever deployed the billing service.
 
@@ -125,7 +125,7 @@ A brush fire state can persist for a long time. But certain signals suggest the 
 
 **The same systems keep coming up.** If every retrospective mentions the same problem, and it still hasn't been addressed, the team has stopped believing it will be. That's how learned helplessness starts.
 
-**New hires are taking longer to become productive.** This is often the first measurable signal of accumulated tribal knowledge. When onboarding takes longer than it should, it's because the codebase requires context that's not written down anywhere.
+**New hires are taking longer to become productive.** This is often the first measurable signal of accumulated organizational knowledge gaps. When onboarding takes longer than it should, it's because the codebase requires context that's not written down anywhere.
 
 **Your best engineers are spending time on maintenance instead of building.** If your most experienced people are increasingly occupied with keeping things running rather than creating new value, the balance has shifted. You're consuming capacity on maintenance that should be going toward growth.
 

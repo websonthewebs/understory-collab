@@ -90,7 +90,7 @@ Not every piece of tech debt matters equally. The right question is not "how bad
 Map what you find into three buckets:
 
 - **Customer-facing risk**: Things that, if they fail, your customers experience the failure directly. Slow pages, broken workflows, data inconsistencies they can see.
-- **Team-facing risk**: Things that make your engineers slower, less confident, or more error-prone. Flaky tests, manual deployment steps, undocumented tribal knowledge.
+- **Team-facing risk**: Things that make your engineers slower, less confident, or more error-prone. Flaky tests, manual deployment steps, undocumented undocumented organizational knowledge.
 - **Compounding risk**: Things that make other problems worse. Knowledge concentration, lack of monitoring, no incident review process.
 
 This categorization matters because it changes how you make the case for fixing things.

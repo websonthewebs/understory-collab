@@ -121,7 +121,7 @@ This is also when you address the turnover risk. Talk to the people who are hold
 
 **Months 3 and 4: Stabilize the critical path and begin knowledge transfer.**
 
-With the most urgent fires contained, start building redundancy into the critical systems. Cross-train the load-bearing people. Document the tribal knowledge. Begin unwinding the most costly one-customer commitments.
+With the most urgent fires contained, start building redundancy into the critical systems. Cross-train the load-bearing people. Document the undocumented organizational knowledge. Begin unwinding the most costly one-customer commitments.
 
 This is the phase where the team starts to feel the difference. Incidents become less frequent. Releases become less terrifying. The team begins to trust that things are actually improving, not just being talked about.
 
