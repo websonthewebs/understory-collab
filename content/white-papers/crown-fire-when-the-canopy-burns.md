@@ -27,11 +27,19 @@ The dangerous thing about a crown fire is not the fire itself. It's the decision
 
 The most common response to a crown fire is to hire. The logic feels sound: we're short on capacity, we need more people, more people means more output. In a healthy organization, that logic holds. In a crown fire, it inverts.
 
-New engineers need onboarding. In a crown fire environment, the people who would normally onboard them are the same people fighting fires. Every hour a senior engineer spends ramping up a new hire is an hour they're not spending on the crisis. And the new hires, no matter how talented, cannot be effective in a codebase they don't yet understand, surrounded by undocumented systems and tribal knowledge that takes months to absorb.
+Picture the actual situation on the ground. Your projects are already behind schedule. Your developers are just trying to stay above water, keeping escalations at bay while slowly inching forward on feature work. Your QA team is barely keeping up with releases and work in development simultaneously. Dev leads, managers, and product owners are spending their energy trying to protect the teams from getting further off track.
 
-The result is a brief period where things actually get worse. Coordination overhead increases. Communication channels multiply. The people who were already stretched thin are now stretched thinner, because they're carrying the crisis load plus the onboarding load. Six months later, the new hires may be contributing. But the organization just burned six months it didn't have.
+And now you add Dave. Dave knows nothing about the processes, the products, the projects, or the team. He's talented. He's eager. And you have two options for what happens next.
 
-This is not an argument against hiring. It's an argument against hiring as a crisis response. Hire when the foundation is stable enough for new people to stand on. Not before.
+**Option one: invest in Dave.** The team takes time to have Dave shadow team members and learn the ropes. But every fifth process, product detail, or policy has to be explained, and that's being charitable. The team is now back in forming and possibly storming mode. They're on guard because someone new has joined and they're spending brain cycles trying to figure out how this person is going to fit with the existing dynamic. The whole team slows by 20% in order to get Dave up to speed. By the time he is, they've blown past the target date.
+
+**Option two: ignore Dave.** The team keeps going at their regular pace and lets Dave figure it out on his own. They deliver barely on time. They have to squash a mountain of bugs once the feature is released. Three months later, Dave hates working here. There's a rift in the team that might never heal, because this was his first impression of the organization, and by the time the team catches their breath they feel like Dave has been around long enough that he should know more than he does. And here comes the next fire.
+
+There is no option three. In a crown fire, those are the choices. The team absorbs the cost of onboarding and falls further behind, or the team ignores the new person and creates a new organizational problem on top of the existing technical ones.
+
+And then there's the contractor variation, which might be worse. Leadership brings in an entire contract team to work in legacy code and promises, pinky swears, that the core teams will only have to consult. Maybe review some PRs. In practice, those "consultations" become a significant and untracked time sink. The core team is surprised by poor coding technique. They're watching the contractors replicate patterns the team has been actively trying to move away from. Nobody is measuring how much time the core team is actually spending on guidance and review, so everyone is surprised when they report they'll be a month and a half behind on delivering a key feature for busy season.
+
+This is not an argument against hiring or against contractors. It's an argument against adding people as a crisis response. Hire when the foundation is stable enough for new people to stand on. Bring in contractors when the core team has enough bandwidth to actually guide them. Not before.
 
 ---
 
@@ -41,7 +49,7 @@ When things are actively on fire, the instinct is to start fixing immediately. P
 
 Resist this.
 
-We've walked into organizations where the stated problem was "we need to fix our deployment pipeline and migrate to AWS." And sometimes the deployment pipeline does need fixing and the migration does need to happen. But when we sit down and actually map what's happening, we find that the deployment pipeline is not the root cause of the crisis. The root cause is that one person in the middle of a critical process is a single point of failure, and no amount of pipeline improvement changes that. You can build the most elegant CI/CD system in the world and it will not matter if Carol still has to flip the switches.
+We've walked into organizations where the stated problem was "we need to fix our deployment pipeline and migrate to AWS." And sometimes the deployment pipeline does need fixing and the migration does need to happen. But when we sit down and actually map what's happening, we find that the deployment pipeline is not the root cause of the crisis. The root cause is that one person in the middle of a multi-department, business-critical process is performing ten manual steps that nobody else knows how to do. No amount of pipeline improvement changes that. You can build the most elegant CI/CD system in the world and it will not matter if the entire workflow stops when one person goes on vacation.
 
 The pushback we hear most often is "we don't have time for an assessment. We're drowning." And the answer is: you were drowning before you hired us. A couple of weeks to make sure you're fixing the right things is going to save more in the long run than rushing to a solution that lacks context. Applying the same fix to every organization is what amateurs do. The problems may look similar from the outside, but the root causes are specific to your people, your systems, and your history.
 
