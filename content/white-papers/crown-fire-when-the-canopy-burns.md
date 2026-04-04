@@ -85,6 +85,8 @@ This is the hardest part. In a crown fire, some things are going to continue to 
 
 Some systems, features, or commitments are not worth saving. The custom implementation from five years ago that one customer uses and nobody understands? It may be time to sunset it. The internal tool that three people use but requires constant maintenance? It may be time to replace it with something off the shelf or retire it altogether. Crown fires are clarifying moments. They force you to ask which things are actually essential and which things you've been carrying out of inertia.
 
+And sometimes what you have to let go of is new features. This is where the conversation gets uncomfortable, because new features are what leadership gets excited about. They're what sales has promised. They're on the roadmap. But if you have a compliance problem that could cost millions in fines and lawsuits, compliance has to win. It is not sexy work. Nobody is going to celebrate it in the next all-hands. But the new feature does not matter if the business is buried in regulatory penalties or legal action. You have to be willing to give up the things that feel like progress in order to keep the business afloat. And that decision has to come from leadership, explicitly, so the team is not left trying to do both and failing at both.
+
 ---
 
 ## Managing Stakeholders During Crisis
