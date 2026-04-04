@@ -115,6 +115,24 @@ Actions are always louder than words, but actions that happen in rooms your team
 
 ---
 
+## What a Crown Fire Does to the Team
+
+In a smolder, people stop trusting that problems will be addressed. In a crown fire, people stop trusting each other.
+
+This is not a character judgment. It's a predictable response to sustained crisis. When the team is in survival mode, the collaborative behaviors that make a healthy team function start to break down. People stop helping each other with problems outside their immediate scope, not because they don't care, but because they don't have the capacity. Everyone is fully consumed keeping their own area from collapsing. The instinct to reach across and help a teammate is replaced by the instinct to protect your own deliverables, because those are the ones you'll be held accountable for.
+
+The team stops solving problems together. In a healthy environment, a hard problem gets brought to the group. People contribute ideas. Someone takes the lead. The solution draws on the collective experience of the team. In a crown fire, hard problems get handled by whoever is closest, alone, under pressure, with whatever knowledge they have. There's no time to collaborate. There's barely time to communicate. People make decisions in isolation and hope they made the right call.
+
+This isolation compounds the knowledge concentration problem. In a smolder, knowledge silos form gradually through neglect. In a crown fire, they form actively. People become experts in their crisis, their system, their fires. The barriers between those areas harden because nobody has the bandwidth to cross them. A team that used to function as a unit fragments into individuals managing their own emergencies.
+
+And then there's the effect on new people. The Dave scenario from the headcount section plays out against this backdrop. You're asking a new person to integrate into a team that has stopped functioning as a team. The existing members don't have the energy to build relationships with someone new. They don't have the context to spare. The new person reads the room and either forces their way in (creating friction) or retreats (becoming isolated). Neither outcome produces a stronger team.
+
+The most corrosive effect of a crown fire on the team is what happens to their belief that problems are solvable at all. In a brush fire, the team believes things can improve but nobody's prioritizing it. In a smolder, the team has stopped believing leadership will prioritize it. In a crown fire, the team is starting to wonder whether the problems are even fixable. They've been fighting fires for so long that the idea of working on something other than the current emergency feels abstract. The muscle for proactive improvement has atrophied. Even if you gave them protected time tomorrow, it would take weeks before the team could shift out of reactive mode and start using it productively.
+
+Recovering from this requires more than technical stabilization. It requires giving the team evidence, real evidence, that the crisis is being taken seriously, that the workload is going to change, and that collaboration is possible again. You have to create the conditions for the team to start functioning as a team again, because the crisis has systematically dismantled those conditions.
+
+---
+
 ## The 90-Day Stabilization Pattern
 
 Ninety days is not arbitrary. It's a realistic timeline for getting from active crisis to a state where the organization is reactive but no longer in freefall. It will not fix everything. It will get you to a place where you can start making intentional decisions instead of emergency ones.

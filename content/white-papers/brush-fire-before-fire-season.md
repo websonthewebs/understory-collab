@@ -133,6 +133,20 @@ A brush fire state can persist for a long time. But certain signals suggest the 
 
 ---
 
+## The Human Cost You're Not Measuring
+
+In a brush fire state, the team is functional. Projects ship. People collaborate. From the outside, everything looks healthy. And it mostly is. But there's a quiet cost that doesn't show up in any dashboard.
+
+Your team is carrying small workarounds they've stopped noticing. The manual step in the deployment process that takes five minutes. The test that flakes and has to be rerun. The system that nobody touches because it's easier to route around it than to fix it. Each one is minor. None of them register as problems worth raising. But they add up to a persistent, low-grade friction that shapes how the team feels about the work without anyone being able to point to a specific cause.
+
+The bigger risk is what happens to the team's sense of agency. When things are mostly working, the boring problems feel impossible to justify. "We should automate that deployment step" gets met with "it only takes five minutes, we have bigger priorities." "We should refactor that module" gets met with "it works, why touch it?" Over time, people internalize that raising these concerns is not worth the effort. They stop advocating for improvements, not because they've stopped caring, but because the environment has taught them that small problems don't get attention.
+
+This is how a healthy team quietly loses the habit of continuous improvement. Not through crisis, but through comfort. The people who would normally push for better stop pushing because everything is "fine enough." And when conditions eventually change and the organization needs that improvement muscle, it's atrophied.
+
+The teams that stay healthy long-term are the ones where raising a small concern is treated as a contribution, not a complaint. Where fixing a boring problem is recognized as valuable work. Where the team collectively believes they have both the permission and the ability to make things better incrementally. That belief is fragile. It doesn't survive being ignored.
+
+---
+
 ## The Choice You Have Right Now
 
 You're in a position most organizations would envy. Your systems work. Your team is functional. You have time.

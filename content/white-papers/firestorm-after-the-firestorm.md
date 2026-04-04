@@ -97,7 +97,11 @@ But there is a trap on this side too. Incremental migration only works if you ac
 
 The human side of a firestorm is the part that's easiest to overlook and hardest to recover from.
 
-Your team has been operating in survival mode. They've been firefighting, absorbing the knowledge of departed colleagues, working around broken systems, and watching their recommendations get ignored. They're tired. Some of them have already checked out emotionally even if they haven't left yet. And they have very little reason to believe that this time will be different.
+In a brush fire, the team quietly loses the habit of improvement. In a smolder, they stop trusting that leadership will act. In a crown fire, they stop functioning as a team and fragment into individuals managing their own emergencies. In a firestorm, the team is dissolving.
+
+Your best people have already left or are actively planning to. The ones who remain are exhausted and, in many cases, have checked out emotionally even if they still show up every day. They've been firefighting, absorbing the knowledge of departed colleagues, working around broken systems, and watching their recommendations get ignored for months or years. The idea that things could actually get better feels less like hope and more like a story leadership tells itself. The team has no reason to believe that this time will be different, because every previous "this time" wasn't.
+
+What you're looking at is a group of people who have lost the belief that the organization can solve its own problems. Not just that leadership won't prioritize it, but that the problems might be beyond solving. That's a fundamentally different place than a smolder or a crown fire. In those states, the team still believes improvement is possible if the organization chose to invest. In a firestorm, that belief is gone. Rebuilding it requires more than promises and plans. It requires visible, irreversible action.
 
 You cannot rebuild team confidence with words. You rebuild it with action. Specifically, you rebuild it with visible, concrete changes that demonstrate the organization is serious about addressing the problems the team has been raising.
 

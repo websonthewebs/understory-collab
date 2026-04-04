@@ -139,6 +139,24 @@ The biggest threat to burn-down momentum is context switching, not lack of will.
 
 ---
 
+## What a Smolder Does to the Team
+
+In a brush fire state, the team is functional and the human cost is invisible. In a smolder, the cost becomes structural. The team is still working together, still shipping, still solving problems. But the way they work together has changed in ways that are hard to see unless you're looking.
+
+The most damaging shift is that people stop trusting that raising problems will lead to change. They've flagged issues before. They've explained the risks. Nothing happened, or worse, they got assigned to fix it on top of their existing workload. So they adapt. They stop raising concerns. They stop advocating for improvements. They focus on their own work and accept the problems they can't change.
+
+This looks like a team that's functioning. It feels, from the inside, like a team that's given up. Not on the work itself, but on the idea that the organization will invest in making the work better. The individual contributors are still competent and still care about their craft. But they've stopped believing that the team, collectively, can move the needle on the systemic problems. They've stopped collaborating on the hard stuff and started just getting through the day.
+
+The second shift is more subtle. In a healthy team, people lean on each other. They ask for help. They share context. They pull each other into problems because they trust that the help will be reciprocated. In a smolder, people start insulating. They build expertise in their own area and don't invest in understanding anyone else's. Not out of selfishness, but out of self-preservation. If the organization isn't going to address the systemic problems, the safest move is to make yourself indispensable in your corner and keep your head down.
+
+This creates the knowledge concentration problem from the other direction. It's not just that knowledge is locked in individual heads because of poor documentation practices. It's that people are actively choosing not to share because sharing means taking on more responsibility in an environment that's already stretched thin.
+
+The third shift is what happens to the team's relationship with leadership. In a brush fire state, there's still goodwill. The team believes leadership will listen if something important comes up. In a smolder, that goodwill has eroded. The team has learned through experience that leadership either doesn't see the problems, doesn't prioritize them, or doesn't follow through on promises to address them. Communication becomes performative. Status updates are crafted to say the right things rather than the true things. The gap between what the team reports and what the team knows grows wider.
+
+Rebuilding from this state requires more than fixing the technical problems. It requires rebuilding the team's belief that raising a problem is worth the effort, that collaboration on systemic issues is valued, and that leadership will follow through. Technical fixes without that foundation will be undermined by a team that no longer trusts the process.
+
+---
+
 ## When a Smolder Becomes Something Worse
 
 Smolders are stable, and that's both their defining characteristic and their danger. But stability is not permanent. Certain events can tip a smolder into a crown fire almost overnight.
