@@ -89,6 +89,8 @@ Stabilize first. Get to a state where the existing systems are not actively fail
 
 Then modernize from a position of strength. Replace systems one at a time. Migrate incrementally. Make each step reversible. This is slower than a big-bang rewrite, and it is dramatically more likely to succeed.
 
+But there is a trap on this side too. Incremental migration only works if you actually follow through. If you start migrating incrementally but keep deferring the next step in favor of shiny new features, you end up in the same place that brought you to the firestorm. You'll have a half-migrated system that's worse than what you started with, because now you're maintaining two architectures instead of one. Discipline and focus are the difference between incremental progress and incremental neglect. And that discipline is harder on leadership than on the team, because it means doing the unglamorous work of negotiating priorities, protecting the migration time, and saying no to things that are more exciting but less important.
+
 ---
 
 ## Rebuilding Team Confidence
