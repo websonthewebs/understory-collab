@@ -7,7 +7,7 @@ If you're reading this, the fire is visible. Leadership knows. Customers know. Y
 
 This paper is for the leader who's in it right now. Not the one who suspects there might be a problem. The one who's managing escalations, watching releases slip, and fielding questions from the board about why things aren't getting better despite the investment. The one whose team is spending more energy keeping things running than building what's next.
 
-Here's what we'll say upfront: crown fires are addressable. Organizations come back from this. But the path back requires discipline, honest assessment, and a willingness to resist the instinct to move fast just because everything feels urgent.
+Crown fires are addressable. Organizations come back from this. But the path back requires discipline, honest assessment, and a willingness to resist the instinct to move fast just because everything feels urgent.
 
 ---
 
