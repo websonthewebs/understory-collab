@@ -65,6 +65,14 @@ The pattern is always the same. The initial deal looks like revenue. What it act
 
 The only healthy response to these opportunities is the one that starts with understanding what's actually being asked before saying yes. Not "how do we make it work?" but "what are we committing to maintain, for how long, and at what cost?"
 
+A few practices that protect you:
+
+**Account for the hidden costs upfront.** When you evaluate a custom deal, don't just calculate the development cost against the contract value. Ask what happens if the customer is still on this custom implementation five years from now. Ask what happens if they leave after year one. Amortize or depreciate the development investment over time the same way you would any other capital expenditure. Run the math for both scenarios, they renew and they don't, and make the decision based on the full picture.
+
+**Build in a sunset period and stick to it.** If you agree to custom work, define from the beginning when and how it will be decommissioned or absorbed into the standard product. Write it into the agreement. If you don't set that boundary at the start, you will not set it later, and you will be carrying that code indefinitely.
+
+**Treat custom implementations as depreciating assets.** The $1.5 million custom build is not a $1.5 million asset. It's a $1.5 million asset that loses value every year while accumulating maintenance cost. If nobody is actively using it, maintaining it, or paying for it, it needs to be retired. The longer it sits untouched, the more expensive the eventual crisis when it breaks.
+
 ---
 
 ## Assessing Severity Without Over-Investing
@@ -93,7 +101,11 @@ The engineering equivalent is scheduled, intentional debt reduction built into t
 
 **What this looks like in practice:**
 
-**Dedicate a predictable percentage of capacity.** Whether it's 10% or 20% depends on how much brush you've accumulated, but the number matters less than the consistency. A team that reliably spends 15% of every sprint on debt reduction will make more progress over a year than a team that does a "tech debt sprint" once a quarter and then abandons it when priorities shift.
+**Keep a maintenance lane.** Reserve a consistent percentage of sprint capacity for debt reduction and maintenance work. Twenty percent is a good starting point. Some sprints you'll use all of it. Some sprints you won't need to. That's the point. When the system is healthy, that unused capacity flows back into feature work. When something needs attention, the lane is already there and nobody has to fight for permission to use it.
+
+Here's what this actually produces. On a team that maintained this discipline, PagerDuty calls dropped to roughly one every six months. The system hummed. And because the maintenance lane kept things healthy, the team could dedicate 95% of their sprint time to new features. Most leaders assume that maintenance work takes away from feature development. In practice, *not* doing maintenance is what takes away from feature development, because you end up spending that time on emergency fixes, incident response, and working around problems that should have been addressed months ago.
+
+**Run periodic burn weeks.** In addition to the ongoing maintenance lane, schedule periodic "burn weeks" where the team focuses entirely on clearing accumulated brush. This is different from the maintenance lane. The lane handles the steady trickle. Burn weeks tackle the backlog, the larger items that need focused, uninterrupted attention. Once a quarter works well for most teams. The cadence matters less than actually protecting the time when it comes.
 
 **Make the work visible.** Debt reduction work should go through the same planning and review process as feature work. If it's invisible, it's the first thing that gets cut when priorities compete. Track it. Demo it. Show leadership what was addressed and why it mattered.
 
