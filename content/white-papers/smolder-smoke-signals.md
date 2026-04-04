@@ -79,7 +79,7 @@ Ask them: *What's the thing you're most worried about that nobody's working on?*
 
 These questions will surface the real risk map faster than any scanning tool or consultant report.
 
-But here's the prerequisite that makes all of this work: psychological safety. These questions only produce honest answers if the people you're asking believe that honesty won't be punished. If the last person who flagged a problem got assigned to fix it on their own time, or got told they were being negative, or watched their concern get dismissed in a leadership meeting, your team has already learned what happens when they speak up. They will tell you things are fine. They will give you the version of the truth that's safest for them. And you will continue to not see the smoke.
+But there's a prerequisite that makes all of this work. Psychological safety. These questions only produce honest answers if the people you're asking believe that honesty won't be punished. If the last person who flagged a problem got assigned to fix it on their own time, or got told they were being negative, or watched their concern get dismissed in a leadership meeting, your team has already learned what happens when they speak up. They will tell you things are fine. They will give you the version of the truth that's safest for them. And you will continue to not see the smoke.
 
 Before you ask these questions, you have to have built the kind of environment where the answers can be real. If you haven't, that's the first thing to fix, because every other step in this section depends on it.
 
@@ -90,7 +90,7 @@ Not every piece of tech debt matters equally. The right question is not "how bad
 Map what you find into three buckets:
 
 - **Customer-facing risk**: Things that, if they fail, your customers experience the failure directly. Slow pages, broken workflows, data inconsistencies they can see.
-- **Team-facing risk**: Things that make your engineers slower, less confident, or more error-prone. Flaky tests, manual deployment steps, undocumented undocumented organizational knowledge.
+- **Team-facing risk**: Things that make your engineers slower, less confident, or more error-prone. Flaky tests, manual deployment steps, undocumented organizational knowledge.
 - **Compounding risk**: Things that make other problems worse. Knowledge concentration, lack of monitoring, no incident review process.
 
 This categorization matters because it changes how you make the case for fixing things.

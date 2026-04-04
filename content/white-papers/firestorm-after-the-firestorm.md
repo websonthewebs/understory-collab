@@ -3,9 +3,9 @@
 
 ## Firestorms are survivable, but recovery requires a fundamentally different approach than what created the crisis.
 
-You already know things are bad. You didn't need a quiz to tell you that. But the quiz probably confirmed something you've been feeling for a while: this is not a single fire. It's multiple fires feeding each other, and the approaches that got the organization to this point are not going to get it out.
+You already know things are bad. You didn't need a quiz to tell you that. But the quiz probably confirmed something you've been feeling for a while. This is not a single fire. It's multiple fires feeding each other, and the approaches that got the organization to this point are not going to get it out.
 
-This paper is not going to sugarcoat the situation. If you scored in the firestorm range, your organization is dealing with compounding problems that have been building for years. But organizations come back from this. The ones that do share a common trait: they stop trying to fix the symptoms and start making the hard decisions about what to save, what to let go, and how to rebuild trust with the people who've been living in the fire.
+This paper is not going to sugarcoat the situation. If you scored in the firestorm range, your organization is dealing with compounding problems that have been building for years. But organizations come back from this. The ones that do share a common trait. They stop trying to fix the symptoms and start making the hard decisions about what to save, what to let go, and how to rebuild trust with the people who've been living in the fire.
 
 ---
 
@@ -31,7 +31,7 @@ When they leave, they take more than their labor. They take the context that liv
 
 The remaining team members inherit all of that responsibility without inheriting any of that knowledge. They're now doing more work with less understanding of the systems they're working on. The environment gets worse. The next best person starts looking. The spiral tightens.
 
-And here is the part that leadership often misses: by the time someone gives notice, the decision to leave was made months ago. The thing that pushed them over the edge was not the last incident. It was the accumulation of every incident before it, every ignored recommendation, every "we'll get to that next quarter" that never materialized. By the time you see the resignation, it's far too late to address the cause.
+And here is the part that leadership often misses. By the time someone gives notice, the decision to leave was made months ago. The thing that pushed them over the edge was not the last incident. It was the accumulation of every incident before it, every ignored recommendation, every "we'll get to that next quarter" that never materialized. By the time you see the resignation, it's far too late to address the cause.
 
 Stopping the spiral requires addressing the environment, not just replacing the people. If you hire into the same conditions that drove the last person out, the new person will eventually reach the same conclusion. You're not solving the problem. You're resetting the clock on it.
 
@@ -48,6 +48,8 @@ Then time passes. The customer downsizes their commitment, or leaves entirely, o
 Multiply that by five custom deals, or ten, or twenty, and you have an organization where a meaningful percentage of the engineering team's capacity is consumed by maintaining things that generate no current revenue and serve no current customer. The developers have to sort through code paths that exist for one client who left three years ago. Every new feature has to account for edge cases that only exist because of bespoke implementations nobody remembers agreeing to.
 
 The revenue from those original deals was real. But it was a one-time capture. The maintenance cost is perpetual. And it was never factored into the original calculation, because nobody asked "what does this cost us in year five?" or "what happens when they don't renew?"
+
+And then there are acquisitions. An acquisition is, in many ways, the largest one-customer feature an organization can take on. You acquire a company or a product, announce the integration, and then the actual work of absorbing it begins. Except it often doesn't. The integration stalls. The acquired system runs on different infrastructure, different frameworks, different conventions. The original team that built it leaves. And ten years after the acquisition announcement, the legacy code from the acquired product is still sitting in its own silo, maintained by whoever happens to be closest to it, running on infrastructure nobody else touches. It was supposed to be temporary. It became permanent through neglect. And now it's another fire that feeds the rest.
 
 Unwinding this in a firestorm is painful. It means sunsetting features that someone, somewhere, might still be using. It means having conversations with customers about what will and won't be supported going forward. It means acknowledging that decisions made years ago, decisions that looked smart at the time, created obligations the organization can no longer afford to carry.
 

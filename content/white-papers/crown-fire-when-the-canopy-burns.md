@@ -25,7 +25,7 @@ The dangerous thing about a crown fire is not the fire itself. It's the decision
 
 ## Why Adding Headcount Usually Makes It Worse
 
-The most common response to a crown fire is to hire. The logic feels sound: we're short on capacity, we need more people, more people means more output. In a healthy organization, that logic holds. In a crown fire, it inverts.
+The most common response to a crown fire is to hire. The logic feels sound. We're short on capacity, we need more people, more people means more output. In a healthy organization, that logic holds. In a crown fire, it inverts.
 
 Picture the actual situation on the ground. Your projects are already behind schedule. Your developers are just trying to stay above water, keeping escalations at bay while slowly inching forward on feature work. Your QA team is barely keeping up with releases and work in development simultaneously. Dev leads, managers, and product owners are spending their energy trying to protect the teams from getting further off track.
 
@@ -51,7 +51,7 @@ Resist this.
 
 We've walked into organizations where the stated problem was "we need to fix our deployment pipeline and migrate to AWS." And sometimes the deployment pipeline does need fixing and the migration does need to happen. But when we sit down and actually map what's happening, we find that the deployment pipeline is not the root cause of the crisis. The root cause is that one person in the middle of a multi-department, business-critical process is performing ten manual steps that nobody else knows how to do. No amount of pipeline improvement changes that. You can build the most elegant CI/CD system in the world and it will not matter if the entire workflow stops when one person goes on vacation.
 
-The pushback we hear most often is "we don't have time for an assessment. We're drowning." And the answer is: you were drowning before you hired us. A couple of weeks to make sure you're fixing the right things is going to save more in the long run than rushing to a solution that lacks context. Applying the same fix to every organization is what amateurs do. The problems may look similar from the outside, but the root causes are specific to your people, your systems, and your history.
+The pushback we hear most often is "we don't have time for an assessment. We're drowning." And the answer is simple. You were drowning before you hired us. A couple of weeks to make sure you're fixing the right things is going to save more in the long run than rushing to a solution that lacks context. Applying the same fix to every organization is what amateurs do. The problems may look similar from the outside, but the root causes are specific to your people, your systems, and your history.
 
 **What an honest assessment looks like:**
 
@@ -61,7 +61,7 @@ The pushback we hear most often is "we don't have time for an assessment. We're 
 
 **Find the load-bearing people.** In every crown fire, there are a small number of people holding a disproportionate amount of the system together. They're the ones getting paged at 2 AM. They're the ones who get pulled into every incident. They're the ones who can't take vacation because nobody else can do what they do. These people are simultaneously your most important asset and your biggest risk. If you lose them, the crown fire becomes a firestorm.
 
-**Separate symptoms from causes.** Slow releases are a symptom. Frequent escalations are a symptom. The causes are further upstream: missing automation, knowledge concentration, architectural decisions that made sense five years ago and don't anymore, organizational structures that create bottlenecks. Fix symptoms and they come back. Fix causes and the symptoms resolve.
+**Separate symptoms from causes.** Slow releases are a symptom. Frequent escalations are a symptom. The causes are further upstream. Missing automation, knowledge concentration, architectural decisions that made sense five years ago and don't anymore, organizational structures that create bottlenecks. Fix symptoms and they come back. Fix causes and the symptoms resolve.
 
 ---
 
@@ -103,7 +103,7 @@ Acknowledge the impact without over-explaining the technical details. Customers 
 
 **With the team:**
 
-The people closest to the fire need two things: a clear priority order so they know what to work on, and visible leadership engagement so they know the organization takes this seriously. If leadership is asking the team to fix the crisis while simultaneously pushing for new features on the same timeline, the message is that the crisis isn't actually a priority. Protect the team's focus. Make the hard calls about what gets deferred so they don't have to.
+The people closest to the fire need two things. A clear priority order so they know what to work on, and visible leadership engagement so they know the organization takes this seriously. If leadership is asking the team to fix the crisis while simultaneously pushing for new features on the same timeline, the message is that the crisis isn't actually a priority. Protect the team's focus. Make the hard calls about what gets deferred so they don't have to.
 
 **Communicate in both directions.**
 
