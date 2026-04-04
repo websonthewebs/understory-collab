@@ -54,6 +54,18 @@ This compounds when knowledge lives in private channels. If two engineers have b
 
 The fix isn't documentation for documentation's sake. It's building practices where knowledge is shared in public by default: decisions made in shared channels, troubleshooting done in team-visible spaces, architecture context recorded where the next person can find it. Not because you're planning for people to leave, but because knowledge that's only accessible to one person isn't really organizational knowledge at all.
 
+**Case pattern: The Carol Problem**
+
+We worked with an organization where standing up a new server was a three-month process. That alone is a red flag, but the real problem was in the details. When we mapped the process during discovery with every person involved, the workflow looked like this: Department A hands off to Department B, who hands off to Department C, who hands off to Carol, who hands off to Department D, who hands off to Department E.
+
+Carol. One person. In the middle of a multi-department, business-critical process. Ten manual steps that only she knew how to perform. If Carol went on vacation, the entire process paused until she got back. If Carol left the company, they would not be able to stand up new servers. They would not be able to serve new customers. The business would functionally collapse — and nobody had flagged this as a risk because the process was "working."
+
+But that wasn't the only problem hiding in the same workflow. The person responsible for decommissioning the old server after migration — deleting the data that had been copied to the new one — had been let go at some point. Nobody reassigned that step. So data wasn't being cleaned up. The company couldn't figure out why they were burning through server capacity so fast. The answer was sitting in a process that nobody had looked at end-to-end since it was first designed.
+
+Two different forms of knowledge concentration. Two different kinds of debt accruing simultaneously. One process. And until someone sat down and mapped the whole thing with every person in the room, none of it was visible.
+
+That's a smolder.
+
 ---
 
 ## Mapping Your Smolder
