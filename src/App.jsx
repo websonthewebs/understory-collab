@@ -7,6 +7,7 @@ import Implementation from './pages/Implementation'
 import Portfolios from './pages/Portfolios'
 import Contact from './pages/Contact'
 import Accessibility from './pages/Accessibility'
+import Quiz from './pages/Quiz'
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="portfolios" element={<Portfolios />} />
             <Route path="contact" element={<Contact />} />
             <Route path="accessibility" element={<Accessibility />} />
+            <Route path="quiz" element={<Quiz />} />
           </Route>
         </Routes>
       </Router>
