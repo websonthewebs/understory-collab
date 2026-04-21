@@ -7,6 +7,8 @@ import Implementation from './pages/Implementation'
 import Portfolios from './pages/Portfolios'
 import Contact from './pages/Contact'
 import Accessibility from './pages/Accessibility'
+import Newsletter from './pages/Newsletter'
+import NewsletterPost from './pages/NewsletterPost'
 import './App.css'
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
             <Route path="advisory" element={<Advisory />} />
             <Route path="implementation" element={<Implementation />} />
             <Route path="portfolios" element={<Portfolios />} />
+            <Route path="newsletter" element={<Newsletter />} />
+            <Route path="newsletter/:slug" element={<NewsletterPost />} />
             <Route path="contact" element={<Contact />} />
             <Route path="accessibility" element={<Accessibility />} />
           </Route>
