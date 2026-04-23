@@ -591,6 +591,158 @@
     } else {
       revealTargets.forEach(el => el.classList.add('visible'));
     }
+
+    /* ============ Section 3: onboarding animation ============ */
+    const typedText = document.getElementById('typed-text');
+    const cursorEl  = document.getElementById('typing-cursor');
+    const aiResp    = document.getElementById('ai-resp');
+    const prevBtn   = document.getElementById('prevBtn');
+    const nextBtn   = document.getElementById('nextBtn');
+    const navHint   = document.getElementById('navHint');
+    const pips      = Array.from(document.querySelectorAll('.progress-pip'));
+    const steps     = Array.from(document.querySelectorAll('.anim-step'));
+
+    const SCRIPT = "I've spent years developing a method for breaking down fermentation — not just recipes, but the actual science behind why things work. I can teach anyone to make their own hot sauce, miso, sourdough, and understand what's happening at every stage.";
+    const TYPING_MIN = 28;
+    const TYPING_MAX = 62;
+    const PAUSE_AFTER_TYPING = 3000;
+    const REVEAL_AI_DELAY    = 2500;
+    const STEP_2_DURATION    = 9000;
+
+    let currentStep = 1;
+    let charIndex   = 0;
+    let autoAdvance = true;
+    let started     = false;
+    const timers    = [];
+
+    function clearTimers() {
+      while (timers.length) clearTimeout(timers.pop());
+    }
+
+    function setStep(step, opts) {
+      const isAuto = !!(opts && opts.auto);
+      currentStep = step;
+
+      steps.forEach(s => s.classList.remove('active'));
+      pips.forEach((p, i) => {
+        const isActive = (i + 1) <= step;
+        p.classList.toggle('active', isActive);
+        p.setAttribute('aria-selected', String(i + 1 === step));
+      });
+      const stepEl = document.getElementById('step' + step);
+      if (stepEl) stepEl.classList.add('active');
+
+      prevBtn.disabled = (step === 1);
+      nextBtn.disabled = (step === 3);
+
+      // When the user navigates manually, show each step in its
+      // completed state instead of replaying the typing/reveal.
+      if (!isAuto) {
+        if (step >= 1) {
+          typedText.textContent = SCRIPT;
+          charIndex = SCRIPT.length;
+          cursorEl.classList.add('hidden');
+        }
+        if (step >= 2) {
+          aiResp.classList.add('show');
+        } else {
+          aiResp.classList.remove('show');
+        }
+      }
+    }
+
+    function typeNextChar() {
+      if (!autoAdvance) return;
+      if (charIndex < SCRIPT.length) {
+        typedText.textContent += SCRIPT.charAt(charIndex);
+        charIndex++;
+        const delay = TYPING_MIN + Math.random() * (TYPING_MAX - TYPING_MIN);
+        timers.push(setTimeout(typeNextChar, delay));
+      } else {
+        cursorEl.classList.add('hidden');
+        timers.push(setTimeout(() => {
+          if (autoAdvance) advanceTo(2);
+        }, PAUSE_AFTER_TYPING));
+      }
+    }
+
+    function advanceTo(step) {
+      setStep(step, { auto: true });
+      if (step === 2) {
+        timers.push(setTimeout(() => {
+          if (autoAdvance) aiResp.classList.add('show');
+        }, REVEAL_AI_DELAY));
+        timers.push(setTimeout(() => {
+          if (autoAdvance) advanceTo(3);
+        }, STEP_2_DURATION));
+      }
+      if (step === 3) {
+        timers.push(setTimeout(() => {
+          navHint.classList.add('show');
+          autoAdvance = false;
+        }, 1500));
+      }
+    }
+
+    function stopAutoAdvance() {
+      if (!autoAdvance) return;
+      autoAdvance = false;
+      clearTimers();
+      navHint.classList.add('show');
+    }
+
+    function startAnimation() {
+      if (started) return;
+      started = true;
+      if (reduceMotion) {
+        // Skip directly to the final state and stop.
+        autoAdvance = false;
+        setStep(3, { auto: false });
+        navHint.classList.add('show');
+        return;
+      }
+      timers.push(setTimeout(typeNextChar, 700));
+    }
+
+    if ('IntersectionObserver' in window) {
+      const animObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startAnimation();
+            animObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+      animObserver.observe(document.querySelector('.device-frame'));
+    } else {
+      startAnimation();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      stopAutoAdvance();
+      if (currentStep > 1) setStep(currentStep - 1, { auto: false });
+    });
+    nextBtn.addEventListener('click', () => {
+      stopAutoAdvance();
+      if (currentStep < 3) setStep(currentStep + 1, { auto: false });
+    });
+    pips.forEach(pip => {
+      pip.addEventListener('click', () => {
+        stopAutoAdvance();
+        setStep(parseInt(pip.dataset.step, 10), { auto: false });
+      });
+    });
+
+    // Left/right arrow keys navigate steps when focus is inside the demo.
+    document.querySelector('.animation-section').addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' && currentStep < 3) {
+        stopAutoAdvance();
+        setStep(currentStep + 1, { auto: false });
+      } else if (e.key === 'ArrowLeft' && currentStep > 1) {
+        stopAutoAdvance();
+        setStep(currentStep - 1, { auto: false });
+      }
+    });
   })();
 </script>
 
