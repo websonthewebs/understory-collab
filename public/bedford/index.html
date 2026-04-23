@@ -323,6 +323,20 @@
     letter-spacing: 0.05em;
   }
 
+  /* Fade-in variant used in Step 1 once typing completes, to signal
+     that Bedford is processing the response. Reuses the pulsing dot. */
+  .reading-indicator {
+    margin-top: 18px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .reading-indicator.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .routing-dot {
     width: 8px;
     height: 8px;
@@ -777,7 +791,8 @@
     .anim-step { opacity: 1; visibility: visible; margin-bottom: 28px; }
     .anim-step + .anim-step { border-top: 1px solid var(--hairline-light); padding-top: 28px; }
     .typing-cursor { display: none; }
-    .ai-response { opacity: 1; transform: none; }
+    .ai-response,
+    .reading-indicator { opacity: 1; transform: none; }
     .anim-controls { display: none; }
     #typed-text::before { content: attr(data-script); }
     .method-detail { max-height: none; padding-top: 12px; padding-bottom: 24px; }
@@ -825,6 +840,10 @@
           <div class="typing-field" aria-live="polite" aria-atomic="false" aria-label="Your response">
             <span class="speaker-tag is-user" aria-hidden="true">You</span>
             <span id="typed-text" data-script="I&#39;ve spent years developing a method for breaking down fermentation &mdash; not just recipes, but the actual science behind why things work. I can teach anyone to make their own hot sauce, miso, sourdough, and understand what&#39;s happening at every stage."></span><span class="typing-cursor" id="typing-cursor" aria-hidden="true"></span>
+          </div>
+          <div class="routing-indicator reading-indicator" id="step1Reading" aria-hidden="true">
+            <span class="routing-dot"></span>
+            <span>Bedford is reading&hellip;</span>
           </div>
         </div>
 
@@ -996,25 +1015,27 @@
     });
 
     /* ============ Section 3: onboarding animation ============ */
-    const typedText = document.getElementById('typed-text');
-    const cursorEl  = document.getElementById('typing-cursor');
-    const aiResp    = document.getElementById('ai-resp');
-    const prevBtn   = document.getElementById('prevBtn');
-    const nextBtn   = document.getElementById('nextBtn');
-    const navHint   = document.getElementById('navHint');
-    const pips      = Array.from(document.querySelectorAll('.progress-pip'));
-    const steps     = Array.from(document.querySelectorAll('.anim-step'));
+    const typedText     = document.getElementById('typed-text');
+    const cursorEl      = document.getElementById('typing-cursor');
+    const step1Reading  = document.getElementById('step1Reading');
+    const aiResp        = document.getElementById('ai-resp');
+    const prevBtn       = document.getElementById('prevBtn');
+    const nextBtn       = document.getElementById('nextBtn');
+    const navHint       = document.getElementById('navHint');
+    const pips          = Array.from(document.querySelectorAll('.progress-pip'));
+    const steps         = Array.from(document.querySelectorAll('.anim-step'));
 
     const SCRIPT = "I've spent years developing a method for breaking down fermentation — not just recipes, but the actual science behind why things work. I can teach anyone to make their own hot sauce, miso, sourdough, and understand what's happening at every stage.";
     const TYPING_MIN = 28;
     const TYPING_MAX = 62;
-    const PAUSE_AFTER_TYPING = 3000;
-    const REVEAL_AI_DELAY    = 2500;
-    const STEP_2_DURATION    = 9000;
+    // How long to wait after the last character before showing the
+    // "Bedford is reading..." indicator. Short enough to feel responsive,
+    // long enough to feel like a real processing beat.
+    const PAUSE_BEFORE_READING = 900;
 
     let currentStep = 1;
     let charIndex   = 0;
-    let autoAdvance = true;
+    let autoTyping  = true;
     let started     = false;
     const timers    = [];
 
@@ -1045,6 +1066,7 @@
           typedText.textContent = SCRIPT;
           charIndex = SCRIPT.length;
           cursorEl.classList.add('hidden');
+          step1Reading.classList.add('show');
         }
         if (step >= 2) {
           aiResp.classList.add('show');
@@ -1055,41 +1077,31 @@
     }
 
     function typeNextChar() {
-      if (!autoAdvance) return;
+      if (!autoTyping) return;
       if (charIndex < SCRIPT.length) {
         typedText.textContent += SCRIPT.charAt(charIndex);
         charIndex++;
         const delay = TYPING_MIN + Math.random() * (TYPING_MAX - TYPING_MIN);
         timers.push(setTimeout(typeNextChar, delay));
       } else {
+        // Typing complete. Hide the cursor, surface the reading
+        // indicator so the user can see Bedford "processing", and
+        // invite them to advance manually. We deliberately do NOT
+        // auto-advance past Step 1 — the demo should never land a
+        // passive viewer on the routing card at an awkward moment.
         cursorEl.classList.add('hidden');
         timers.push(setTimeout(() => {
-          if (autoAdvance) advanceTo(2);
-        }, PAUSE_AFTER_TYPING));
-      }
-    }
-
-    function advanceTo(step) {
-      setStep(step, { auto: true });
-      if (step === 2) {
-        timers.push(setTimeout(() => {
-          if (autoAdvance) aiResp.classList.add('show');
-        }, REVEAL_AI_DELAY));
-        timers.push(setTimeout(() => {
-          if (autoAdvance) advanceTo(3);
-        }, STEP_2_DURATION));
-      }
-      if (step === 3) {
-        timers.push(setTimeout(() => {
+          if (!autoTyping) return;
+          step1Reading.classList.add('show');
           navHint.classList.add('show');
-          autoAdvance = false;
-        }, 1500));
+          autoTyping = false;
+        }, PAUSE_BEFORE_READING));
       }
     }
 
-    function stopAutoAdvance() {
-      if (!autoAdvance) return;
-      autoAdvance = false;
+    function stopAutoTyping() {
+      if (!autoTyping) return;
+      autoTyping = false;
       clearTimers();
       navHint.classList.add('show');
     }
@@ -1099,7 +1111,7 @@
       started = true;
       if (reduceMotion) {
         // Skip directly to the final state and stop.
-        autoAdvance = false;
+        autoTyping = false;
         setStep(3, { auto: false });
         navHint.classList.add('show');
         return;
@@ -1129,16 +1141,16 @@
     }
 
     prevBtn.addEventListener('click', () => {
-      stopAutoAdvance();
+      stopAutoTyping();
       if (currentStep > 1) setStep(currentStep - 1, { auto: false });
     });
     nextBtn.addEventListener('click', () => {
-      stopAutoAdvance();
+      stopAutoTyping();
       if (currentStep < 3) setStep(currentStep + 1, { auto: false });
     });
     pips.forEach(pip => {
       pip.addEventListener('click', () => {
-        stopAutoAdvance();
+        stopAutoTyping();
         setStep(parseInt(pip.dataset.step, 10), { auto: false });
       });
     });
@@ -1146,10 +1158,10 @@
     // Left/right arrow keys navigate steps when focus is inside the demo.
     document.querySelector('.animation-section').addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' && currentStep < 3) {
-        stopAutoAdvance();
+        stopAutoTyping();
         setStep(currentStep + 1, { auto: false });
       } else if (e.key === 'ArrowLeft' && currentStep > 1) {
-        stopAutoAdvance();
+        stopAutoTyping();
         setStep(currentStep - 1, { auto: false });
       }
     });
