@@ -1110,9 +1110,17 @@
       if (started) return;
       started = true;
       if (reduceMotion) {
-        // Skip directly to the final state and stop.
+        // Skip the typing animation itself, since that's the motion a
+        // reduce-motion visitor asked us not to run. Leave them on
+        // Step 1 with the response fully rendered and the reading
+        // indicator visible, so they can navigate Step 2 and Step 3
+        // manually — the same flow everyone else gets after typing
+        // completes. Auto-skipping to Step 3 would bury the demo.
         autoTyping = false;
-        setStep(3, { auto: false });
+        typedText.textContent = SCRIPT;
+        charIndex = SCRIPT.length;
+        cursorEl.classList.add('hidden');
+        step1Reading.classList.add('show');
         navHint.classList.add('show');
         return;
       }
