@@ -378,11 +378,64 @@
     margin-bottom: 0;
   }
 
-  .step-handoff {
-    margin-top: 18px;
-    font-size: 0.85rem;
-    color: var(--forest);
+  /* Skill tree: the root-level branches Bedford offers a Builder after
+     the identity moment. Three first moves, no path prescribed — the
+     demo stops at the threshold and lets the learner choose. The name
+     also rhymes with Understory (forest ecology beneath a canopy),
+     which is why it earns its place here. */
+  .skill-tree {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--hairline-light);
+  }
+
+  .skill-tree-label {
+    display: block;
+    font-family: var(--type-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 12px;
+  }
+
+  .skill-tree-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-tree-options li {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--secondary);
+  }
+
+  .skill-tree-options li::before {
+    content: '→';
+    color: var(--burgundy);
+    flex-shrink: 0;
+    font-family: var(--type-mono);
+  }
+
+  .skill-tree-options li strong {
+    color: var(--warm-black);
     font-weight: 500;
+    margin-right: 4px;
+  }
+
+  .skill-tree-close {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: var(--secondary);
+    font-style: italic;
+    line-height: 1.55;
   }
 
   .anim-controls {
@@ -792,9 +845,17 @@
           <p class="step-cap">Based on how you showed up in the last two minutes:</p>
           <div class="routed-card" aria-label="Bedford's placement">
             <h4>You&rsquo;re a Builder.</h4>
-            <p>You already have a method. You don&rsquo;t need to find your expertise &mdash; you need a structure that lets you package it and get it into the world. Here&rsquo;s your first step.</p>
+            <p>You already have a method. You don&rsquo;t need to find your expertise &mdash; you need a structure that lets you package it and get it into the world.</p>
           </div>
-          <p class="step-handoff">This is where Bedford takes over.</p>
+          <div class="skill-tree" role="group" aria-label="Your skill tree: three first moves">
+            <span class="skill-tree-label" aria-hidden="true">Your skill tree</span>
+            <ul class="skill-tree-options">
+              <li><strong>Name the method.</strong> Write down the steps you stopped noticing.</li>
+              <li><strong>Ship one small piece.</strong> Make something a real person could use this week.</li>
+              <li><strong>Watch someone use it.</strong> Observe how a real human moves through what you made.</li>
+            </ul>
+            <p class="skill-tree-close">Pick the one closest to where you are today. Come back for the others.</p>
+          </div>
         </div>
       </div>
     </div>
