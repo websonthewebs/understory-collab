@@ -279,15 +279,16 @@
   .typing-cursor.hidden { display: none; }
 
   .speaker-tag {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 7px;
+    width: max-content;
     font-family: var(--type-mono);
     font-size: 0.62rem;
     font-weight: 400;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
 
   .speaker-tag::before {
@@ -300,6 +301,16 @@
   }
 
   .speaker-tag.is-user { color: var(--burgundy); }
+
+  /* Inside the typing field the chip sits as a compact header above
+     the response, separated from it by a hairline so the user turn
+     reads as a self-contained block. */
+  .typing-field .speaker-tag {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(107, 15, 20, 0.14);
+    width: 100%;
+  }
 
   .routing-indicator {
     display: flex;
@@ -758,8 +769,8 @@
           <h3>Welcome to Bedford.</h3>
           <p>Before we build anything together, we want to understand something real about you.</p>
           <p class="prompt">What&rsquo;s the thing you know how to do that you&rsquo;ve never figured out how to get paid for?</p>
-          <span class="speaker-tag is-user" aria-hidden="true">You</span>
           <div class="typing-field" aria-live="polite" aria-atomic="false" aria-label="Your response">
+            <span class="speaker-tag is-user" aria-hidden="true">You</span>
             <span id="typed-text" data-script="I&#39;ve spent years developing a method for breaking down fermentation &mdash; not just recipes, but the actual science behind why things work. I can teach anyone to make their own hot sauce, miso, sourdough, and understand what&#39;s happening at every stage."></span><span class="typing-cursor" id="typing-cursor" aria-hidden="true"></span>
           </div>
         </div>
