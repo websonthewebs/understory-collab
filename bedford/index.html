@@ -569,6 +569,78 @@
     .method-tag { align-self: flex-start; }
   }
 
+  /* ============ SECTION 6: THE CLOSE ============ */
+  .close-section {
+    background: var(--oxblood);
+    color: var(--cream);
+    text-align: center;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .close-section .content-frame {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .close-section .content-frame.visible {
+    animation: fadeUp 0.95s ease-out forwards;
+  }
+
+  .close-section p {
+    font-size: clamp(1.05rem, 2.3vw, 1.2rem);
+    line-height: 1.75;
+    color: var(--cream-soft);
+    margin-bottom: 2rem;
+    text-wrap: pretty;
+  }
+
+  .close-section p em {
+    color: var(--cream);
+    font-style: normal;
+  }
+
+  .cta-link {
+    display: inline-block;
+    font-family: var(--type-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+    background: var(--coral);
+    text-decoration: none;
+    padding: 16px 36px;
+    border: 1px solid var(--coral);
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+
+  .cta-link:hover,
+  .cta-link:focus-visible {
+    background: transparent;
+    color: var(--coral);
+    transform: translateY(-1px);
+  }
+
+  .uc-mark {
+    display: inline-block;
+    margin-top: 3rem;
+    font-family: var(--type-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream-soft);
+    opacity: 0.55;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+
+  .uc-mark:hover,
+  .uc-mark:focus-visible {
+    color: var(--coral);
+    opacity: 1;
+  }
+
   /* ============ ANIMATIONS ============ */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
@@ -759,6 +831,15 @@
     </ul>
   </section>
 
+  <!-- SECTION 6: THE CLOSE -->
+  <section class="close-section" aria-labelledby="close-msg">
+    <div class="content-frame">
+      <p id="close-msg">From the outside, Bedford looks like a team building something genuinely new in a space that has mostly recycled the same playbook. <em>I&rsquo;d love to know more about what I can&rsquo;t see from here, and whether there&rsquo;s a moment where Understory could help accelerate what you&rsquo;re building.</em></p>
+      <a href="mailto:contact@understorycollab.com?subject=Bedford%20%C3%97%20Understory" class="cta-link">Let&rsquo;s talk</a>
+      <a href="https://understorycollab.com" target="_blank" rel="noopener" class="uc-mark">Understory Collaborative</a>
+    </div>
+  </section>
+
 </main>
 
 <script>
@@ -768,7 +849,7 @@
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const revealTargets = document.querySelectorAll(
-      '.bridge .content-frame, .animation-section .section-label, .animation-section .device-frame, .pullback .content-frame, .methodology .section-label, .method-list'
+      '.bridge .content-frame, .animation-section .section-label, .animation-section .device-frame, .pullback .content-frame, .methodology .section-label, .method-list, .close-section .content-frame'
     );
 
     if (reduceMotion) {
