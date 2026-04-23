@@ -473,6 +473,102 @@
     text-wrap: balance;
   }
 
+  /* ============ SECTION 5: METHODOLOGY ============ */
+  .methodology {
+    background: var(--cream);
+    flex-direction: column;
+    padding: 96px 40px;
+  }
+
+  .methodology .section-label {
+    margin-bottom: 3rem;
+  }
+
+  .method-list {
+    width: 100%;
+    max-width: 720px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--hairline-light);
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .method-list.visible {
+    animation: fadeUp 0.9s ease-out 0.15s forwards;
+  }
+
+  .method-item {
+    border-bottom: 1px solid var(--hairline-light);
+  }
+
+  .method-trigger {
+    appearance: none;
+    background: none;
+    border: 0;
+    width: 100%;
+    text-align: left;
+    padding: 28px 0;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    display: block;
+    transition: padding-left 0.3s ease;
+  }
+
+  .method-trigger:hover {
+    padding-left: 12px;
+  }
+
+  .method-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .method-title {
+    font-family: var(--type-display);
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    color: var(--warm-black);
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .method-tag {
+    flex-shrink: 0;
+    font-family: var(--type-mono);
+    font-size: 0.65rem;
+    color: var(--secondary);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .method-detail {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.45s ease, padding 0.4s ease;
+  }
+
+  .method-trigger[aria-expanded="true"] + .method-detail {
+    max-height: 280px;
+    padding-bottom: 24px;
+  }
+
+  .method-detail p {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    line-height: 1.7;
+    max-width: 60ch;
+  }
+
+  @media (max-width: 600px) {
+    .method-header { flex-direction: column; gap: 6px; }
+    .method-tag { align-self: flex-start; }
+  }
+
   /* ============ ANIMATIONS ============ */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
@@ -596,6 +692,73 @@
     </div>
   </section>
 
+  <!-- SECTION 5: METHODOLOGY -->
+  <section class="methodology" aria-labelledby="method-label">
+    <span class="section-label" id="method-label">Why each of those moments was designed that way</span>
+
+    <ul class="method-list">
+      <li class="method-item">
+        <button class="method-trigger" type="button" aria-expanded="false" aria-controls="m1-detail">
+          <span class="method-header">
+            <span class="method-title">The open question, not a quiz</span>
+            <span class="method-tag">Schlechty &middot; Chi &amp; Wylie</span>
+          </span>
+        </button>
+        <div class="method-detail" id="m1-detail" role="region" aria-label="The open question, not a quiz">
+          <p>Authentic engagement requires genuine cognitive investment. A multiple-choice quiz produces strategic compliance, where learners perform the right answer rather than think with it. An open question invites the learner to construct meaning, which is where real learning begins.</p>
+        </div>
+      </li>
+
+      <li class="method-item">
+        <button class="method-trigger" type="button" aria-expanded="false" aria-controls="m2-detail">
+          <span class="method-header">
+            <span class="method-title">Reading behavior, not self-report</span>
+            <span class="method-tag">Behavioral signals</span>
+          </span>
+        </button>
+        <div class="method-detail" id="m2-detail" role="region" aria-label="Reading behavior, not self-report">
+          <p>People are generally unreliable narrators of where they are. What they write, how they write it, the specificity and structure of their language tends to reveal more than self-selection alone can.</p>
+        </div>
+      </li>
+
+      <li class="method-item">
+        <button class="method-trigger" type="button" aria-expanded="false" aria-controls="m3-detail">
+          <span class="method-header">
+            <span class="method-title">Showing the work</span>
+            <span class="method-tag">Social presence &middot; Trust</span>
+          </span>
+        </button>
+        <div class="method-detail" id="m3-detail" role="region" aria-label="Showing the work">
+          <p>Most platforms route silently. Telling the learner what you noticed and why you&rsquo;re placing them where you are builds trust before a single lesson happens. Transparency is itself a differentiator.</p>
+        </div>
+      </li>
+
+      <li class="method-item">
+        <button class="method-trigger" type="button" aria-expanded="false" aria-controls="m4-detail">
+          <span class="method-header">
+            <span class="method-title">Identity-based routing</span>
+            <span class="method-tag">Self-determination theory</span>
+          </span>
+        </button>
+        <div class="method-detail" id="m4-detail" role="region" aria-label="Identity-based routing">
+          <p>&ldquo;You&rsquo;re a Builder&rdquo; reflects how someone showed up, and it does so without assigning them a personality type. Naming what the system saw feeds both autonomy and competence, two of the three conditions for intrinsic motivation.</p>
+        </div>
+      </li>
+
+      <li class="method-item">
+        <button class="method-trigger" type="button" aria-expanded="false" aria-controls="m5-detail">
+          <span class="method-header">
+            <span class="method-title">The threshold, not the funnel</span>
+            <span class="method-tag">Progressive disclosure</span>
+          </span>
+        </button>
+        <div class="method-detail" id="m5-detail" role="region" aria-label="The threshold, not the funnel">
+          <p>The experience ends at a door the learner can choose to walk through. By that moment, they have already felt what Bedford is. Their choice to step forward is itself the first act of authentic engagement.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
 </main>
 
 <script>
@@ -605,7 +768,7 @@
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const revealTargets = document.querySelectorAll(
-      '.bridge .content-frame, .animation-section .section-label, .animation-section .device-frame, .pullback .content-frame'
+      '.bridge .content-frame, .animation-section .section-label, .animation-section .device-frame, .pullback .content-frame, .methodology .section-label, .method-list'
     );
 
     if (reduceMotion) {
@@ -623,6 +786,16 @@
     } else {
       revealTargets.forEach(el => el.classList.add('visible'));
     }
+
+    /* ============ Section 5: methodology accordion ============ */
+    const triggers = document.querySelectorAll('.method-trigger');
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const wasOpen = trigger.getAttribute('aria-expanded') === 'true';
+        triggers.forEach(t => t.setAttribute('aria-expanded', 'false'));
+        if (!wasOpen) trigger.setAttribute('aria-expanded', 'true');
+      });
+    });
 
     /* ============ Section 3: onboarding animation ============ */
     const typedText = document.getElementById('typed-text');
