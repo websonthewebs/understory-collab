@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bedford × Understory Collaborative</title>
+<meta name="description" content="A short note on onboarding craft, written for Bedford by Understory Collaborative.">
+<meta property="og:title" content="Bedford × Understory Collaborative">
+<meta property="og:description" content="A short note on onboarding craft, written for Bedford by Understory Collaborative.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2A0608">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Palette aligned with learnbedford.com (oxblood + coral),
+       tuned for WCAG 2.1 AA contrast across every foreground/background pair used. */
+    --cream: #F5EDE6;
+    --light-warm: #EDE3DA;
+    --warm-black: #1A1612;
+    --oxblood: #2A0608;
+    --coral: #F07A6E;
+    --burgundy: #6B0F14;
+    --forest: #3A5248;
+    --secondary: #6B5D55;       /* AA on cream (5.46:1) and light-warm (5.00:1) */
+    --cream-soft: #C9BFB5;      /* AA on oxblood (10.29:1) */
+    --cream-on-forest: #C4BDB3; /* AA on forest (4.55:1) */
+    --hairline-dark: rgba(245, 237, 230, 0.14);
+    --hairline-light: rgba(26, 22, 18, 0.10);
+
+    --type-body: 'Source Sans 3', system-ui, sans-serif;
+    --type-display: 'Playfair Display', Georgia, serif;
+    --type-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--warm-black);
+    font-family: var(--type-body);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection { background: var(--coral); color: var(--oxblood); }
+
+  :focus-visible {
+    outline: 2px solid var(--coral);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 96px 40px;
+    position: relative;
+    scroll-snap-align: start;
+  }
+
+  .content-frame {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  /* ============ SECTION 1: THE HOOK ============ */
+  .hook {
+    background: var(--oxblood);
+    color: var(--cream);
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hook .content-frame {
+    opacity: 0;
+    animation: fadeUp 1.2s ease-out 0.3s forwards;
+  }
+
+  .hook h1 {
+    font-family: var(--type-display);
+    font-weight: 400;
+    font-size: clamp(1.55rem, 3.6vw, 2.35rem);
+    line-height: 1.45;
+    letter-spacing: -0.005em;
+    margin-bottom: 2.25rem;
+    font-style: italic;
+    color: var(--coral);
+    text-wrap: balance;
+  }
+
+  .hook p {
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    color: var(--cream-soft);
+    letter-spacing: 0.01em;
+  }
+
+  .hook p em {
+    color: var(--cream);
+    font-style: normal;
+  }
+
+  /* ============ ANIMATIONS ============ */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    html { scroll-snap-type: none; }
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 600px) {
+    section { padding: 72px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+  <!-- SECTION 1: THE HOOK -->
+  <section class="hook" aria-labelledby="hook-quote">
+    <div class="content-frame">
+      <h1 id="hook-quote">&ldquo;The best burger isn&rsquo;t the most famous one. It&rsquo;s the one where someone cared enough to get every detail right &mdash; and you could taste the difference.&rdquo;</h1>
+      <p><em>Bedford feels like that kind of project.</em></p>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
