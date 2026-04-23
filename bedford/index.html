@@ -112,6 +112,38 @@
     font-style: normal;
   }
 
+  /* ============ SECTION 2: THE BRIDGE ============ */
+  .bridge {
+    background: var(--cream);
+  }
+
+  .bridge .content-frame {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .bridge .content-frame.visible {
+    animation: fadeUp 0.9s ease-out forwards;
+  }
+
+  .bridge p {
+    font-size: clamp(1.08rem, 2.1vw, 1.25rem);
+    margin-bottom: 1.5rem;
+    color: var(--warm-black);
+    text-wrap: pretty;
+  }
+
+  .bridge p.lede {
+    font-family: var(--type-display);
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    line-height: 1.5;
+    color: var(--burgundy);
+    font-style: italic;
+    margin-top: 2.25rem;
+    margin-bottom: 0;
+    text-wrap: balance;
+  }
+
   /* ============ ANIMATIONS ============ */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
@@ -146,7 +178,43 @@
     </div>
   </section>
 
+  <!-- SECTION 2: THE BRIDGE -->
+  <section class="bridge">
+    <div class="content-frame">
+      <p>People who can taste the difference between good and great are exactly the people who get frustrated building programs. The gap between a learner experience that feels right and one that actually holds people is almost invisible from the outside, and it becomes brutally obvious once you&rsquo;re inside it.</p>
+      <p class="lede">Onboarding is where most programs lose people. The content is usually fine. The experience around it was treated as an afterthought rather than designed with care.</p>
+    </div>
+  </section>
+
 </main>
+
+<script>
+  (function () {
+    'use strict';
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const revealTargets = document.querySelectorAll(
+      '.bridge .content-frame'
+    );
+
+    if (reduceMotion) {
+      revealTargets.forEach(el => el.classList.add('visible'));
+    } else if ('IntersectionObserver' in window) {
+      const reveal = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+      revealTargets.forEach(el => reveal.observe(el));
+    } else {
+      revealTargets.forEach(el => el.classList.add('visible'));
+    }
+  })();
+</script>
 
 </body>
 </html>
