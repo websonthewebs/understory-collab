@@ -9,6 +9,7 @@
 <meta property="og:description" content="A short note on onboarding craft, written for Bedford by Understory Collaborative.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#2A0608">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232A0608'/><path d='M22 20v18a10 10 0 0 0 20 0V20' fill='none' stroke='%23F07A6E' stroke-width='5' stroke-linecap='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -623,8 +624,9 @@
   }
 
   .uc-mark {
-    display: inline-block;
-    margin-top: 3rem;
+    display: block;
+    width: max-content;
+    margin: 3rem auto 0;
     font-family: var(--type-mono);
     font-size: 0.7rem;
     letter-spacing: 0.18em;
@@ -675,6 +677,26 @@
     .device-url { font-size: 0.65rem; }
   }
 </style>
+<noscript>
+  <style>
+    /* Without JS: reveal everything that would have been progressively shown,
+       stack the three onboarding steps vertically, and hide the demo controls. */
+    .bridge .content-frame,
+    .pullback .content-frame,
+    .close-section .content-frame,
+    .section-label,
+    .device-frame,
+    .method-list { opacity: 1 !important; transform: none !important; animation: none !important; }
+    .anim-step { position: static; opacity: 1; visibility: visible; margin-bottom: 28px; }
+    .anim-step + .anim-step { border-top: 1px solid var(--hairline-light); padding-top: 28px; }
+    .device-content { min-height: 0; }
+    .typing-cursor { display: none; }
+    .ai-response { opacity: 1; transform: none; }
+    .anim-controls { display: none; }
+    #typed-text::before { content: attr(data-script); }
+    .method-detail { max-height: none; padding-top: 12px; padding-bottom: 24px; }
+  </style>
+</noscript>
 </head>
 <body>
 
@@ -715,7 +737,7 @@
           <p>Before we build anything together, we want to understand something real about you.</p>
           <p class="prompt">What&rsquo;s the thing you know how to do that you&rsquo;ve never figured out how to get paid for?</p>
           <div class="typing-field" aria-live="polite" aria-atomic="false">
-            <span id="typed-text"></span><span class="typing-cursor" id="typing-cursor" aria-hidden="true"></span>
+            <span id="typed-text" data-script="I&#39;ve spent years developing a method for breaking down fermentation &mdash; not just recipes, but the actual science behind why things work. I can teach anyone to make their own hot sauce, miso, sourdough, and understand what&#39;s happening at every stage."></span><span class="typing-cursor" id="typing-cursor" aria-hidden="true"></span>
           </div>
         </div>
 
