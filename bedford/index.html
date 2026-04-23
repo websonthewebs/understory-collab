@@ -448,6 +448,31 @@
     border: 0;
   }
 
+  /* ============ SECTION 4: THE PULLBACK ============ */
+  .pullback {
+    background: var(--oxblood);
+    color: var(--cream);
+    text-align: center;
+  }
+
+  .pullback .content-frame {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .pullback .content-frame.visible {
+    animation: fadeUp 0.95s ease-out forwards;
+  }
+
+  .pullback p {
+    font-family: var(--type-display);
+    font-size: clamp(1.35rem, 3.4vw, 1.85rem);
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--coral);
+    text-wrap: balance;
+  }
+
   /* ============ ANIMATIONS ============ */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
@@ -564,6 +589,13 @@
     </div>
   </section>
 
+  <!-- SECTION 4: THE PULLBACK -->
+  <section class="pullback">
+    <div class="content-frame">
+      <p>That&rsquo;s what onboarding looks like when the infrastructure is designed for the learner instead of the platform.</p>
+    </div>
+  </section>
+
 </main>
 
 <script>
@@ -573,7 +605,7 @@
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const revealTargets = document.querySelectorAll(
-      '.bridge .content-frame, .animation-section .section-label, .animation-section .device-frame'
+      '.bridge .content-frame, .animation-section .section-label, .animation-section .device-frame, .pullback .content-frame'
     );
 
     if (reduceMotion) {
