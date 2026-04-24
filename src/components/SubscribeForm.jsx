@@ -20,11 +20,16 @@ function SubscribeForm({ variant = 'default', heading, description }) {
       setEmail('')
     } catch (error) {
       setStatus('error')
-      setErrorMessage(
-        error?.message?.includes('Subscribe failed')
-          ? 'Something went wrong. Please try again.'
-          : 'Something went wrong. Please try again.'
-      )
+      const raw = error?.message || ''
+      let friendly = 'Something went wrong. Please try again.'
+      if (/already/i.test(raw)) {
+        friendly = "You're already subscribed — check your inbox."
+      } else if (/disabled|members/i.test(raw)) {
+        friendly = 'Subscriptions are currently unavailable.'
+      } else if (/email/i.test(raw)) {
+        friendly = 'Please enter a valid email address.'
+      }
+      setErrorMessage(friendly)
     }
   }
 
