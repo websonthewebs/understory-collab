@@ -15,6 +15,14 @@
   text-align: center;
 }
 
+.footer-subscribe {
+  width: 100%;
+  max-width: 520px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+}
+
 .footer-nav {
   width: 100%;
 }
