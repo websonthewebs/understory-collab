@@ -67,7 +67,20 @@ export async function getPostBySlug(slug) {
   return data.posts?.[0] ?? null
 }
 
+async function fetchIntegrityToken() {
+  const res = await fetch(`${GHOST_URL}/members/api/integrity-token/`, {
+    method: 'GET',
+  })
+  if (!res.ok) {
+    const detail = await describeError(res)
+    console.error('Ghost integrity-token failed:', res.status, detail)
+    throw new Error(detail || `Integrity token fetch failed: ${res.status}`)
+  }
+  return (await res.text()).trim()
+}
+
 export async function subscribe(email) {
+  const integrityToken = await fetchIntegrityToken()
   const res = await fetch(`${GHOST_URL}/members/api/send-magic-link/`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -76,6 +89,8 @@ export async function subscribe(email) {
       emailType: 'signup',
       labels: [],
       name: '',
+      honeypot: null,
+      integrityToken,
     }),
   })
   if (!res.ok) {
