@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SubscribeForm from './SubscribeForm'
 import './Footer.css'
 
 function Footer() {
@@ -7,11 +8,20 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
+        <div className="footer-subscribe">
+          <SubscribeForm
+            variant="footer"
+            heading="Stay in the loop"
+            description="Get our newsletter in your inbox."
+          />
+        </div>
+
         <nav className="footer-nav" aria-label="Footer navigation">
           <ul className="footer-links" role="list">
             <li><Link to="/advisory">Advisory</Link></li>
             <li><Link to="/implementation">Implementation</Link></li>
             <li><Link to="/portfolios">Portfolios</Link></li>
+            <li><Link to="/newsletter">Newsletter</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </nav>

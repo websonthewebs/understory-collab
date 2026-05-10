@@ -30,6 +30,11 @@ function Navigation() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/newsletter" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+              Newsletter
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
               Contact Us
             </NavLink>
