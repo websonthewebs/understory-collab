@@ -126,6 +126,20 @@ function Home() {
         </div>
       </section>
 
+      <section className="quiz-cta" aria-labelledby="quiz-cta-heading">
+        <div className="section-container">
+          <div className="quiz-cta-content">
+            <h2 id="quiz-cta-heading">What's On Fire?</h2>
+            <p className="quiz-cta-subtitle">A 2-minute technical health self-assessment</p>
+            <p className="quiz-cta-description">
+              Six honest questions. No vendor pitch. Just a clear-eyed look at the state
+              of your engineering organization — and what the signals mean.
+            </p>
+            <Link to="/quiz" className="btn btn-primary btn-large">Take the Quiz</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="cta-section" aria-labelledby="cta-heading">
         <div className="section-container">
           <h2 id="cta-heading">Ready to grow together?</h2>

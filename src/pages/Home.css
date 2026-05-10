@@ -264,6 +264,40 @@
   line-height: 1.7;
 }
 
+/* Quiz CTA Section */
+.quiz-cta {
+  padding: 5rem 0;
+  text-align: center;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.quiz-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz-cta h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.quiz-cta-subtitle {
+  font-size: 1.125rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin: 0 0 1.5rem;
+}
+
+.quiz-cta-description {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}
+
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;

@@ -7,6 +7,7 @@ import Implementation from './pages/Implementation'
 import Portfolios from './pages/Portfolios'
 import Contact from './pages/Contact'
 import Accessibility from './pages/Accessibility'
+import Quiz from './pages/Quiz'
 import Newsletter from './pages/Newsletter'
 import NewsletterPost from './pages/NewsletterPost'
 import './App.css'
@@ -25,6 +26,7 @@ function App() {
             <Route path="newsletter/:slug" element={<NewsletterPost />} />
             <Route path="contact" element={<Contact />} />
             <Route path="accessibility" element={<Accessibility />} />
+            <Route path="quiz" element={<Quiz />} />
           </Route>
         </Routes>
       </Router>
