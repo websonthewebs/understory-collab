@@ -1,41 +1,134 @@
-import { Link, NavLink } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 import ucLogo from '../assets/UC_Logo.png'
 import './Navigation.css'
 
 function Navigation() {
   const { theme, toggleTheme } = useTheme()
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const servicesRef = useRef(null)
+  const location = useLocation()
+
+  const closeServices = () => setServicesOpen(false)
+
+  useEffect(() => {
+    function handleClick(event) {
+      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+        setServicesOpen(false)
+      }
+    }
+    function handleKey(event) {
+      if (event.key === 'Escape') setServicesOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    document.addEventListener('keydown', handleKey)
+    return () => {
+      document.removeEventListener('mousedown', handleClick)
+      document.removeEventListener('keydown', handleKey)
+    }
+  }, [])
+
+  const servicesActive =
+    location.pathname.startsWith('/advisory') ||
+    location.pathname.startsWith('/implementation')
 
   return (
     <header className="nav-header">
       <nav className="nav-container" aria-label="Main navigation">
-        <Link to="/" className="nav-logo-link" aria-label="Understory Collaborative home">
+        <Link to="/" className="nav-brand" aria-label="Understory Collaborative home">
           <img src={ucLogo} alt="" className="nav-logo" aria-hidden="true" />
+          <span className="nav-wordmark">Understory Collaborative</span>
         </Link>
 
         <ul className="nav-links" role="list">
-          <li>
-            <NavLink to="/advisory" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-              Advisory
+          <li
+            className="nav-item nav-item--has-menu"
+            ref={servicesRef}
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+            onFocus={() => setServicesOpen(true)}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                setServicesOpen(false)
+              }
+            }}
+          >
+            <button
+              type="button"
+              className={`nav-link nav-link--menu${servicesActive ? ' active' : ''}`}
+              aria-haspopup="true"
+              aria-expanded={servicesOpen}
+              onClick={() => setServicesOpen((open) => !open)}
+            >
+              Services
+              <svg
+                aria-hidden="true"
+                className="nav-caret"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M3 4.5 6 7.5 9 4.5" />
+              </svg>
+            </button>
+            <ul
+              className={`nav-submenu${servicesOpen ? ' open' : ''}`}
+              role="menu"
+              aria-label="Services"
+            >
+              <li role="none">
+                <NavLink
+                  to="/advisory"
+                  role="menuitem"
+                  onClick={closeServices}
+                  className={({ isActive }) =>
+                    isActive ? 'nav-sublink active' : 'nav-sublink'
+                  }
+                >
+                  Advisory
+                </NavLink>
+              </li>
+              <li role="none">
+                <NavLink
+                  to="/implementation"
+                  role="menuitem"
+                  onClick={closeServices}
+                  className={({ isActive }) =>
+                    isActive ? 'nav-sublink active' : 'nav-sublink'
+                  }
+                >
+                  Implementation
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+            >
+              About Us
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/implementation" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-              Implementation
+          <li className="nav-item">
+            <NavLink
+              to="/portfolios"
+              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+            >
+              Our Work
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/portfolios" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-              Portfolios
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/newsletter" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-              Newsletter
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+          <li className="nav-item">
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+            >
               Contact Us
             </NavLink>
           </li>

@@ -140,18 +140,21 @@ function Home() {
     <div className="home">
       <section className="hero" aria-labelledby="hero-heading">
         <h1 id="hero-heading" className="sr-only">Understory Collaborative</h1>
-        <div className="hero-content">
-          <p className="hero-lede">
-            Great software isn't just about clean code, it's about solving real problems
-            when it matters most. Whether you're clearing brush to prevent sparks,
-            containing a fast-moving fire, or rebuilding in the wake of a firestorm, we
-            bring technical rigor and human empathy to every engagement by building
-            solutions that are accessible, maintainable, and genuinely useful.
-          </p>
-          <p className="hero-prompt">
-            Find out where to start. Take our self-diagnosis quiz to get insight into
-            your organization's technical health.
-          </p>
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="hero-lede">
+              Great software isn't just about clean code, it's about solving real
+              problems when it matters most. Whether you're clearing brush to prevent
+              sparks, containing a fast-moving fire, or rebuilding in the wake of a
+              firestorm, we bring technical rigor and human empathy to every engagement
+              by building solutions that are accessible, maintainable, and genuinely
+              useful.
+            </p>
+            <p className="hero-prompt">
+              Find out where to start. Take our self-diagnosis quiz to get insight into
+              your organization's technical health.
+            </p>
+          </div>
           <div className="hero-cta">
             <Link to="/quiz" className="btn btn-primary btn-large">Take the quiz</Link>
           </div>
